@@ -1,18 +1,18 @@
 -- Modified from: https://github.com/luan/nvim/blob/c9b5e0ea19b42737cf7ab49cadc5c2cd13d3fa4a/lua/lvim/utils/file.lua
 -- MIT License
--- 
+--
 -- Copyright (c) 2018 Luan Santos
--- 
+--
 -- Permission is hereby granted, free of charge, to any person obtaining a copy
 -- of this software and associated documentation files (the "Software"), to deal
 -- in the Software without restriction, including without limitation the rights
 -- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 -- copies of the Software, and to permit persons to whom the Software is
 -- furnished to do so, subject to the following conditions:
--- 
+--
 -- The above copyright notice and this permission notice shall be included in all
 -- copies or substantial portions of the Software.
--- 
+--
 -- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 -- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 -- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -23,11 +23,11 @@
 local Log = {}
 
 Log.levels = {
-  TRACE = 1,
-  DEBUG = 2,
-  INFO = 3,
-  WARN = 4,
-  ERROR = 5,
+    TRACE = 1,
+    DEBUG = 2,
+    INFO = 3,
+    WARN = 4,
+    ERROR = 5,
 }
 vim.tbl_add_reverse_lookup(Log.levels)
 
@@ -42,35 +42,35 @@ function Log:init()
 
   local log_level = Log.levels[(global_settings.log.level):upper() or "WARN"]
   structlog.configure {
-    nvim_logger = {
-      pipelines = {
-        {
-          level = log_level,
-          processors = {
-            structlog.processors.StackWriter({ "line", "file" }, { max_parents = 0, stack_level = 2 }),
-            structlog.processors.Timestamper "%H:%M:%S",
+      nvim_logger = {
+          pipelines = {
+              {
+                  level = log_level,
+                  processors = {
+                      structlog.processors.StackWriter({ "line", "file" }, { max_parents = 0, stack_level = 2 }),
+                      structlog.processors.Timestamper "%H:%M:%S",
+                  },
+                  formatter = structlog.formatters.FormatColorizer(
+                      "%s [%-5s] %s: %-30s",
+                      { "timestamp", "level", "logger_name", "msg" },
+                      { level = structlog.formatters.FormatColorizer.color_level() }
+                  ),
+                  sink = structlog.sinks.Console(false), -- async=false
+              },
+              {
+                  level = log_level,
+                  processors = {
+                      structlog.processors.StackWriter({ "line", "file" }, { max_parents = 3, stack_level = 2 }),
+                      structlog.processors.Timestamper "%F %H:%M:%S",
+                  },
+                  formatter = structlog.formatters.Format(
+                      "%s [%-5s] %s: %-30s",
+                      { "timestamp", "level", "logger_name", "msg" }
+                  ),
+                  sink = structlog.sinks.File(self:get_path()),
+              },
           },
-          formatter = structlog.formatters.FormatColorizer(
-            "%s [%-5s] %s: %-30s",
-            { "timestamp", "level", "logger_name", "msg" },
-            { level = structlog.formatters.FormatColorizer.color_level() }
-          ),
-          sink = structlog.sinks.Console(false), -- async=false
-        },
-        {
-          level = log_level,
-          processors = {
-            structlog.processors.StackWriter({ "line", "file" }, { max_parents = 3, stack_level = 2 }),
-            structlog.processors.Timestamper "%F %H:%M:%S",
-          },
-          formatter = structlog.formatters.Format(
-            "%s [%-5s] %s: %-30s",
-            { "timestamp", "level", "logger_name", "msg" }
-          ),
-          sink = structlog.sinks.File(self:get_path()),
-        },
       },
-    },
   }
 
   local logger = structlog.get_logger "nvim_logger"
@@ -116,11 +116,11 @@ function Log:configure_notifications(nvim_notify)
   end
 
   local notif_pipeline = structlog.Pipeline(
-    structlog.level.INFO,
-    {},
-    structlog.formatters.Format("%s", { "msg" }, { blacklist_all = true }),
-    structlog.sinks.Adapter(log_writer)
-  )
+          structlog.level.INFO,
+          {},
+          structlog.formatters.Format("%s", { "msg" }, { blacklist_all = true }),
+          structlog.sinks.Adapter(log_writer)
+      )
   self.__handle:add_pipeline(notif_pipeline)
 end
 
@@ -130,13 +130,13 @@ end
 ---@param event any
 function Log:add_entry(level, msg, event)
   if
-    not pcall(function()
-      local logger = self:get_logger()
-      if not logger then
-        return
-      end
-      logger:log(level, vim.inspect(msg), event)
-    end)
+      not pcall(function()
+        local logger = self:get_logger()
+        if not logger then
+          return
+        end
+        logger:log(level, vim.inspect(msg), event)
+      end)
   then
     vim.notify "structlog version too old, run `:Lazy sync`"
   end
@@ -146,8 +146,8 @@ end
 ---@return table|nil logger handle if found
 function Log:get_logger()
   local logger_ok, logger = pcall(function()
-    return require("structlog").get_logger "nvim_logger"
-  end)
+        return require("structlog").get_logger "nvim_logger"
+      end)
   if logger_ok and logger then
     return logger
   end

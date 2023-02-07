@@ -6,9 +6,11 @@ _G.DATA_PATH = vim.fn.stdpath "data"
 _G.CACHE_PATH = vim.fn.stdpath "cache"
 _G.XDG_CONFIG_HOME = os.getenv "XDG_CONFIG_HOME" or file.join(os.getenv "HOME", ".config")
 _G.tbl = require("utils.table")
-_G.global_settings ={
-	log = { level = "INFO" },
+_G.global_settings = {
+    log = { level = "INFO" },
 }
+
+_G.override_settings = file.load_module("custom") or { plugins = {}, mason = {}, lang = {} }
 
 require("options")
 
@@ -20,7 +22,7 @@ vim.cmd [[set foldopen-=hor]]
 vim.o.grepprg = "rg --vimgrep --no-heading --smart-case"
 vim.o.grepformat = "%f:%l:%c:%m,%f:%l:%m"
 
-_G.custom_settings = file.load_module("custom") or { plugins = {}, lsp_config = {} }
-require("plugins").load_plugins(custom_settings.plugins)
+require("plugins")
 require("keyboard")
+require("autocmd")
 vim.notify("Config Loaded!", "info")

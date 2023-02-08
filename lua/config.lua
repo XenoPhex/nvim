@@ -10,7 +10,7 @@ _G.global_settings = {
     log = { level = "INFO" },
 }
 
-_G.override_settings = file.load_module("custom") or { plugins = {}, mason = {}, lang = {} }
+_G.override_settings = file.load_module("custom") or require("custom_template")
 
 require("options")
 

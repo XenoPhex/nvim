@@ -26,7 +26,7 @@ local augroup = vim.api.nvim_create_augroup("GeneralAutoCmds", { clear = true })
 vim.api.nvim_create_autocmd({ "VimResized" }, {
     group = augroup,
     callback = function()
-      vim.cmd "tabdo wincmd ="
+        vim.cmd "tabdo wincmd ="
     end,
 })
 
@@ -34,8 +34,8 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     group = augroup,
     pattern = { "qf", "help", "man", "lspinfo", "spectre_panel", "lir" },
     callback = function()
-      vim.api.nvim_buf_set_keymap(0, "n", "q", "<cmd>q!<CR>", { noremap = true, silent = true })
-      vim.cmd [[
+        vim.api.nvim_buf_set_keymap(0, "n", "q", "<cmd>q!<CR>", { noremap = true, silent = true })
+        vim.cmd [[
 		      set nobuflisted
 		]]
     end,
@@ -45,8 +45,8 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     group = augroup,
     pattern = { "gitcommit", "markdown" },
     callback = function()
-      vim.opt_local.wrap = true
-      vim.opt_local.spell = true
+        vim.opt_local.wrap = true
+        vim.opt_local.spell = true
     end,
 })
 
@@ -54,6 +54,6 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
     group = augroup,
     pattern = { "*" },
     callback = function()
-      vim.cmd [[set formatoptions-=cro]]
+        vim.cmd [[set formatoptions-=cro]]
     end,
 })

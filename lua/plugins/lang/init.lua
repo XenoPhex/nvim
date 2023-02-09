@@ -28,14 +28,7 @@ end
 local function load_languages()
 	local langs = {
 		sumneko_lua = require("plugins.lang.sumneko_lua"),
-		gopls = {
-			assignVariableTypes = true,
-			compositeLiteralFields = true,
-			constantValues = true,
-			functionTypeParameters = true,
-			parameterNames = true,
-			rangeVariableTypes = true,
-		},
+		gopls = require("plugins.lang.gopls"),
 	}
 
 	local all_lang = vim.tbl_deep_extend("force", langs, override_settings.lang)

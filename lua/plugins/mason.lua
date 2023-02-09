@@ -37,7 +37,6 @@ require("plugins.lang")
 local sources = {
 	-- null_ls.builtins.code_actions.refactoring, need to figure out why this is breaking
 	-- null_ls.builtins.diagnostics.gospel, do the other spell checkers work well enough?
-	null_ls.builtins.completion.spell,
 	null_ls.builtins.diagnostics.alex,
 	null_ls.builtins.diagnostics.checkmake,
 	null_ls.builtins.diagnostics.codespell,

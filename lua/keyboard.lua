@@ -10,5 +10,8 @@ keymap("n", "<C-f>", "<cmd>Telescope live_grep<cr>", opts)
 -- Hit Return to save
 keymap("n", "<Enter>", "<cmd>wa<cr>", opts)
 
----- No highlight
+-- No highlight
 keymap("n", "<Esc>", ":noh<CR>", opts)
+
+-- Current file's path in command mode
+keymap("c", "%%", [[expand('%:h').'/']], { expr = true })

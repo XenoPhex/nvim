@@ -119,13 +119,13 @@ local plugins = {
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
 		dependencies = {
-			"hrsh7th/cmp-buffer", -- Complete for current words in the buffer
-			"hrsh7th/cmp-cmdline", -- Complete for command line
+			"onsails/lspkind.nvim", -- Formats the tab completion menu
 			"hrsh7th/cmp-nvim-lsp", -- Complete connected to NeoVim's LSP server
 			"hrsh7th/cmp-nvim-lua", -- Complete connected to NeoVim's Lua API
-			"hrsh7th/cmp-path", -- Complete filesystem paths
-			"onsails/lspkind.nvim", -- Adds icons to completions
 			"saadparwaiz1/cmp_luasnip", -- Complete snippets
+			"hrsh7th/cmp-buffer", -- Complete for current words in the buffer
+			"hrsh7th/cmp-path", -- Complete filesystem paths
+			"hrsh7th/cmp-cmdline", -- Enables cmp in '/' (local find) and ':' (command mode)
 		},
 	}),
 	["ray-x/lsp_signature.nvim"] = c("ray-x/lsp_signature.nvim"), -- Connect tab completion with LSP

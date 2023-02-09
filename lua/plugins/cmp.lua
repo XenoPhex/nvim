@@ -35,7 +35,7 @@ local lspkind = require("lspkind")
 
 cmp.setup({
 	completion = {
-		completeopt = "menu,menuone,noinsert", -- Always show menu, don't insert anything by default
+		completeopt = "menu,menuone,noinsert,noselect", -- Always show menu, don't insert anything by default
 		keyword_length = 1,
 	},
 	preselect = cmp.PreselectMode.Item, -- don't select

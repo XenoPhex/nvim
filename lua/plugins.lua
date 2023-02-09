@@ -30,6 +30,7 @@ end
 local plugins = {
 	---- General Utilities
 	["nvim-lua/plenary.nvim"] = p(100, "nvim-lua/plenary.nvim"), -- Common Lua functions
+	["folke/which-key.nvim"] = c("folke/which-key.nvim"),
 	---- UI
 	["alaric/nortia.nvim"] = c({ -- Color scheme
 		"alaric/nortia.nvim",
@@ -39,6 +40,7 @@ local plugins = {
 		},
 	}),
 	["rcarriga/nvim-notify"] = p(100, c("rcarriga/nvim-notify")), -- Pop-up notifications
+	-- TODO: Look into https://github.com/nvim-telescope/telescope-ui-select.nvim
 	["nvim-telescope/telescope.nvim"] = c({ -- Fuzzy finder for files, buffer, etc.
 		"nvim-telescope/telescope.nvim",
 		dependencies = { "telescope-fzf-native.nvim" },
@@ -48,7 +50,6 @@ local plugins = {
 		build = "make",
 		lazy = true,
 	},
-	-- TODO: Look into https://github.com/nvim-telescope/telescope-ui-select.nvim
 	["nvim-tree/nvim-web-devicons"] = c("nvim-tree/nvim-web-devicons"), -- More icons!
 	["utilyre/barbecue.nvim"] = c({ -- Location bar
 		"utilyre/barbecue.nvim",

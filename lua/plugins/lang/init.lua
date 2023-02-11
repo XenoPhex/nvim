@@ -31,7 +31,7 @@ local function load_languages()
 		gopls = require("plugins.lang.gopls"),
 	}
 
-	local all_lang = vim.tbl_deep_extend("force", langs, override_settings.lang)
+	local all_lang = tbl.merge(langs, override_settings.lsp)
 	for lang, config in pairs(all_lang) do
 		config.capabilities = extended_capabilities()
 		lspconfig[lang].setup(config)

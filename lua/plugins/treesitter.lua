@@ -24,7 +24,7 @@
 require("nvim-treesitter.configs").setup({
 	auto_install = true,
 	sync_install = false,
-	ensure_installed = {
+	ensure_installed = tbl.merge({
 		"bash",
 		"c",
 		"cmake",
@@ -44,11 +44,12 @@ require("nvim-treesitter.configs").setup({
 		"lua",
 		"make",
 		"markdown",
+		"query",
 		"ruby",
 		"toml",
 		"vim",
 		"yaml",
-	},
+	}, override_settings.lang),
 	ignore_install = { "phpdoc", "tree-sitter-phpdoc" }, -- List of parsers to ignore installing
 	autopairs = { enable = true },
 	incremental_selection = {

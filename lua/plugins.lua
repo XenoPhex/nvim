@@ -32,13 +32,13 @@ local plugins = {
 	["nvim-lua/plenary.nvim"] = p(100, "nvim-lua/plenary.nvim"), -- Common Lua functions
 	["folke/which-key.nvim"] = c("folke/which-key.nvim"),
 	---- UI
-	["alaric/nortia.nvim"] = c({ -- Color scheme
-		"alaric/nortia.nvim",
-		branch = "main",
-		dependencies = {
-			"rktjmp/lush.nvim", -- Color scheme creation / color management utility
-		},
-	}),
+	["catppuccin/nvim"] = p( -- Color Scheme
+		100,
+		c({
+			"catppuccin/nvim",
+			name = "catppuccin",
+		})
+	),
 	["rcarriga/nvim-notify"] = p(100, c("rcarriga/nvim-notify")), -- Pop-up notifications
 	-- TODO: Look into https://github.com/nvim-telescope/telescope-ui-select.nvim
 	["nvim-telescope/telescope.nvim"] = c({ -- Fuzzy finder for files, buffer, etc.
@@ -115,6 +115,7 @@ local plugins = {
 	}),
 	["windwp/nvim-autopairs"] = c("windwp/nvim-autopairs"), -- Smart pairing for (["...etc.
 	-- Look into https://github.com/AstroNvim/AstroNvim/blob/main/lua/configs/aerial.lua -> https://github.com/stevearc/aerial.nvim
+	-- Look into https://github.com/simrat39/symbols-outline.nvim for file outline
 	--> 4. Tab / Text Completion
 	["hrsh7th/nvim-cmp"] = c({ -- Tab completion
 		"hrsh7th/nvim-cmp",

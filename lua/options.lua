@@ -29,8 +29,8 @@ local options = {
 	linespace = -1, -- No extra spaces between rows
 	wrap = true, -- Wrap long lines
 	number = true, -- Show line numbers
-	scrolloff = 5, -- Minumum lines to keep above and below cursor
-	showmatch = true, -- Show matching brackets/parentthesis
+	scrolloff = 5, -- Minimum lines to keep above and below cursor
+	showmatch = true, -- Show matching brackets/parentheses
 	splitright = true, -- Vertical splits to the right
 	termguicolors = true, -- Enable true colors in terminal
 	updatetime = 300, -- Update swap file and CursorHold delay
@@ -71,8 +71,8 @@ local options = {
 	undoreload = 9999, -- Maximum number lines to save for undo on a buffer reload
 	showmode = false, -- Hide current mode in command-line
 	fillchars = "vert:│,stl: ,stlnc: ",
-	writebackup = false,
-	cursorline = true,
+	writebackup = false, -- Disable making a backup before overwriting a file
+	cursorline = true, -- Highlight the text line of the cursor
 }
 
 for k, v in pairs(options) do

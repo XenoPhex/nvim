@@ -113,6 +113,7 @@ local plugins = {
 		"numToStr/Comment.nvim",
 		dependencies = "JoosepAlviste/nvim-ts-context-commentstring", -- Adds support for additional languages
 	}),
+	["windwp/nvim-autopairs"] = c("windwp/nvim-autopairs"), -- Smart pairing for (["...etc.
 	-- Look into https://github.com/AstroNvim/AstroNvim/blob/main/lua/configs/aerial.lua -> https://github.com/stevearc/aerial.nvim
 	--> 4. Tab / Text Completion
 	["hrsh7th/nvim-cmp"] = c({ -- Tab completion

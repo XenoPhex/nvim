@@ -83,6 +83,7 @@ local plugins = {
 			"RRethy/nvim-treesitter-endwise", -- Adds "end"/closes blocks
 			"RRethy/nvim-treesitter-textsubjects", -- Adds block aware visual selection expansion
 			"nvim-treesitter/nvim-treesitter-textobjects", -- Adds additional language parsing mechanisms
+			"m-demare/hlargs.nvim", -- Highlight arguments' definitions and usages
 		},
 	}),
 	["neovim/nvim-lspconfig"] = c({ -- Contains basic LSP configurations

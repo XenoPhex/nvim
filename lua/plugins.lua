@@ -109,7 +109,6 @@ local plugins = {
 		},
 	}),
 	--> 3. Language Tooling
-	["lvimuser/lsp-inlayhints.nvim"] = "lvimuser/lsp-inlayhints.nvim", -- Displays inline documentation 'hints'
 	["numToStr/Comment.nvim"] = c({ -- Language aware comment helpers
 		"numToStr/Comment.nvim",
 		dependencies = "JoosepAlviste/nvim-ts-context-commentstring", -- Adds support for additional languages

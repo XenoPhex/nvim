@@ -10,7 +10,6 @@
   "cmp_luasnip": { "branch": "master", "commit": "18095520391186d634a0045dacaa346291096566" },
   "friendly-snippets": { "branch": "main", "commit": "80597f3ea824946c87fd29f82b5ed4f24ef473f3" },
   "lazy.nvim": { "branch": "main", "commit": "d13fe9353594bce58a5b9fc6d7166d183e0fc035" },
-  "lsp-inlayhints.nvim": { "branch": "main", "commit": "84ca3abe8aaecbb5b30ad89e4701d4a9c821b72c" },
   "lsp_signature.nvim": { "branch": "master", "commit": "4665921ff8e30601c7c1328625b3abc1427a6143" },
   "lspkind.nvim": { "branch": "master", "commit": "c68b3a003483cf382428a43035079f78474cd11e" },
   "lush.nvim": { "branch": "main", "commit": "6923ccef17c5276bc5d3cca907082e19ee165d55" },

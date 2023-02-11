@@ -42,23 +42,15 @@ local diagnostics = {
 		update_in_insert = false,
 	},
 	on = {
-		virtual_text = false, -- disable virtual text
-		virtual_lines = true,
-		signs = {
-			active = signs, -- show signs
-		},
-		update_in_insert = true,
-		underline = true,
-		severity_sort = true,
 		float = {
+			border = "rounded",
 			focusable = false,
-			style = "minimal",
-			-- border = "rounded",
-			border = { "▄", "▄", "▄", "█", "▀", "▀", "▀", "█" }, -- [ top top top - right - bottom bottom bottom - left ]
+			severity_sort = true,
 			source = "always",
-			header = "",
-			prefix = "",
 		},
+		severity_sort = true,
+		update_in_insert = true,
+		virtual_text = false,
 	},
 }
 return diagnostics

@@ -38,12 +38,14 @@ notify.setup({
 	-- Render function for notifications. See notify-render()
 	render = "default",
 	-- Default timeout for notifications
-	timeout = 1000,
+	timeout = 3000,
 	-- For stages that change opacity this is treated as the highlight behind the window
 	-- Set this to either a highlight group or an RGB hex value e.g. "#000000"
 	background_colour = "Normal",
 	-- Minimum width for notification windows
 	minimum_width = 10,
+	-- Frames per second for animation stages, higher value means smoother animations but more CPU usage
+	fps = 60,
 	-- Icons for the different levels
 	icons = {
 		ERROR = icons.diagnostics.Error,

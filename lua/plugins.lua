@@ -31,6 +31,7 @@ local plugins = {
 	---- General Utilities
 	["nvim-lua/plenary.nvim"] = p(100, "nvim-lua/plenary.nvim"), -- Common Lua functions
 	["folke/which-key.nvim"] = c("folke/which-key.nvim"),
+	["tanvirtin/vgit.nvim"] = c("tanvirtin/vgit.nvim"),
 	---- UI
 	["catppuccin/nvim"] = p( -- Color Scheme
 		100,

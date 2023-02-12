@@ -1,4 +1,5 @@
 brew "checkmake"
 brew "fd"
+brew "git"
 brew "npm"
 brew "ripgrep"

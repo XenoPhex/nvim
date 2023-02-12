@@ -75,20 +75,20 @@ telescope.setup({
 			"vendor/*",
 		},
 	}),
-	extensions = {
-		fzf = {
-			fuzzy = true, -- false will only do exact matching
-			override_generic_sorter = true, -- override the generic sorter
-			override_file_sorter = true, -- override the file sorter
-			case_mode = "smart_case", -- or "ignore_case" or "respect_case"
-		},
-	},
 	pickers = {
 		lsp_definitions = tbl.merge(dropdown, {
 			fname_width = 60,
 		}),
 		find_files = tbl.merge(dropdown, {
 			hidden = true,
+			find_command = {
+				"fd",
+				"--color=never",
+				"--exclude=git",
+				"--follow",
+				"--hidden",
+				"--type=f",
+			},
 		}),
 		live_grep = tbl.merge(dropdown, {
 			--@usage don't include the filename in the search results
@@ -113,7 +113,3 @@ telescope.setup({
 		},
 	},
 })
-
--- To get fzf loaded and working with telescope, you need to call
--- load_extension, somewhere after setup function:
-require("telescope").load_extension("fzf")

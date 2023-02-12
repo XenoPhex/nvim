@@ -43,13 +43,7 @@ local plugins = {
 	-- TODO: Look into https://github.com/nvim-telescope/telescope-ui-select.nvim
 	["nvim-telescope/telescope.nvim"] = c({ -- Fuzzy finder for files, buffer, etc.
 		"nvim-telescope/telescope.nvim",
-		dependencies = { "telescope-fzf-native.nvim" },
 	}),
-	["nvim-telescope/telescope-fzf-native.nvim"] = { -- Use native FZF (will install automatically)
-		"nvim-telescope/telescope-fzf-native.nvim",
-		build = "make",
-		lazy = true,
-	},
 	["nvim-tree/nvim-web-devicons"] = c("nvim-tree/nvim-web-devicons"), -- More icons!
 	["utilyre/barbecue.nvim"] = c({ -- Location bar
 		"utilyre/barbecue.nvim",

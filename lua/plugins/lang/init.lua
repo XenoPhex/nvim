@@ -28,7 +28,7 @@ end
 
 local function load_languages()
 	local langs = {
-		sumneko_lua = require("plugins.lang.sumneko_lua"),
+		lua_ls = require("plugins.lang.lua_ls"),
 		gopls = require("plugins.lang.gopls"),
 	}
 

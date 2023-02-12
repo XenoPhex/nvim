@@ -149,11 +149,6 @@ local mappings = {
 		["c"] = { "<cmd>HopChar1<cr>", "Jump character" },
 		["v"] = { "<cmd>HopVertical<cr>", "Jump vertically" },
 	},
-	-- ["n"] = {
-	--   name = "[n]otifications",
-	--   ["r"] = { "<cmd>Telescope notify<cr>", "Browse recent notifications" },
-	--   ["l"] = { "<cmd>Noice log<cr>", "Browse log" },
-	-- },
 	["l"] = {
 		name = "[l]sp",
 		["a"] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
@@ -177,6 +172,7 @@ local mappings = {
 			"Workspace Symbols",
 		},
 	},
+	["n"] = { "<cmd>Telescope notify<cr>", "Notifications" },
 }
 which_key.register(mappings, opts)
 which_key.register({

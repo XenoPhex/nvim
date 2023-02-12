@@ -62,6 +62,12 @@ local plugins = {
 			"nvim-tree/nvim-web-devicons",
 		},
 	}),
+	["nvim-lualine/lualine.nvim"] = c({
+		"nvim-lualine/lualine.nvim",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+	}),
 	---- Language Setup
 	--> 1. Setup Snippets
 	["L3MON4D3/LuaSnip"] = { -- Base set of snippets

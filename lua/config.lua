@@ -7,6 +7,7 @@ _G.CACHE_PATH = vim.fn.stdpath("cache")
 _G.XDG_CONFIG_HOME = os.getenv("XDG_CONFIG_HOME") or file.join(os.getenv("HOME"), ".config")
 _G.tbl = require("utils.table")
 _G.global_settings = {
+	theme = "catppuccin",
 	log = { level = "INFO" },
 }
 

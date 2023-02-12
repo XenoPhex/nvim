@@ -16,12 +16,6 @@ local function extended_capabilities()
 					documentationFormat = { "markdown", "plaintext" },
 				},
 			},
-			-- Tell the server the capability of foldingRange,
-			-- Neovim hasn't added foldingRange to default capabilities, users must add it manually
-			foldingRange = {
-				dynamicRegistration = false,
-				lineFoldingOnly = true,
-			},
 		},
 	})
 end

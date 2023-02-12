@@ -142,6 +142,14 @@ local plugins = {
 	}),
 	["windwp/nvim-autopairs"] = c("windwp/nvim-autopairs"), -- Smart pairing for (["...etc.
 	["code-biscuits/nvim-biscuits"] = c("code-biscuits/nvim-biscuits"),
+	["kevinhwang91/nvim-ufo"] = c({
+		"kevinhwang91/nvim-ufo",
+		dependencies = {
+			"kevinhwang91/promise-async",
+			"nvim-treesitter/nvim-treesitter",
+			"luukvbaal/statuscol.nvim",
+		},
+	}),
 	-- Look into https://github.com/simrat39/symbols-outline.nvim for file outline
 }
 

@@ -109,15 +109,7 @@ local plugins = {
 			"jose-elias-alvarez/null-ls.nvim",
 		},
 	}),
-	--> 3. Language Tooling
-	["numToStr/Comment.nvim"] = c({ -- Language aware comment helpers
-		"numToStr/Comment.nvim",
-		dependencies = "JoosepAlviste/nvim-ts-context-commentstring", -- Adds support for additional languages
-	}),
-	["windwp/nvim-autopairs"] = c("windwp/nvim-autopairs"), -- Smart pairing for (["...etc.
-	-- Look into https://github.com/AstroNvim/AstroNvim/blob/main/lua/configs/aerial.lua -> https://github.com/stevearc/aerial.nvim
-	-- Look into https://github.com/simrat39/symbols-outline.nvim for file outline
-	--> 4. Tab / Text Completion
+	--> 3. Tab / Text Completion
 	["hrsh7th/nvim-cmp"] = c({ -- Tab completion
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
@@ -132,6 +124,14 @@ local plugins = {
 		},
 	}),
 	["ray-x/lsp_signature.nvim"] = c("ray-x/lsp_signature.nvim"), -- Connect tab completion with LSP
+	--> 4. Language Tooling
+	["numToStr/Comment.nvim"] = c({ -- Language aware comment helpers
+		"numToStr/Comment.nvim",
+		dependencies = "JoosepAlviste/nvim-ts-context-commentstring", -- Adds support for additional languages
+	}),
+	["windwp/nvim-autopairs"] = c("windwp/nvim-autopairs"), -- Smart pairing for (["...etc.
+	["code-biscuits/nvim-biscuits"] = c("code-biscuits/nvim-biscuits"),
+	-- Look into https://github.com/simrat39/symbols-outline.nvim for file outline
 }
 
 local function load_plugins()
@@ -142,7 +142,7 @@ local function load_plugins()
 
 	-- Lazy takes a list, not a map. So flatten the map.
 	local all_plugins = {}
-	for k, v in pairs(plugins) do
+	for _, v in pairs(plugins) do
 		table.insert(all_plugins, v)
 	end
 
@@ -167,7 +167,7 @@ local function load_plugins()
 	require("lazy").setup({
 		spec = all_plugins,
 		defaults = { lazy = false, version = "*" },
-		checker = { enabled = true, fequency = 3600 },
+		checker = { enabled = true, frequency = 3600 },
 	})
 end
 

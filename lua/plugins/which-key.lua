@@ -87,22 +87,12 @@ local opts = {
 }
 
 local mappings = {
-	-- [";"] = { "<cmd>Alpha<cr>", "Go to dashboard" },
-	-- ["S"] = { "<cmd>TSJSplit<cr>", "Split block" },
-	-- ["J"] = { "<cmd>TSJJoin<cr>", "Split block" },
-	-- ["M"] = { "<cmd>TSJToggle<cr>", "Split block" },
-	-- ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	-- ["E"] = { "<cmd>NvimTreeFindFile<cr>", "Explorer (reveal current file)" },
+	["e"] = { "<cmd>Neotree toggle<cr>", "Explorer" },
 	-- ["w"] = {
 	--   function()
 	--     reload("lvim.utils").save()
 	--   end,
 	--   "Format and Save",
-	-- },
-	-- ["q"] = {
-	-- 	name = "[q]uickfix",
-	-- 	["q"] = { require("lvim.utils").toggle_quickfix, "Toggle quickfix" },
-	-- 	["l"] = { require("lvim.utils").toggle_loc, "Toggle location list" },
 	-- },
 	["f"] = {
 		name = "[f]iles",

@@ -32,6 +32,15 @@ local plugins = {
 	["nvim-lua/plenary.nvim"] = p(100, "nvim-lua/plenary.nvim"), -- Common Lua functions
 	["folke/which-key.nvim"] = c("folke/which-key.nvim"),
 	["tanvirtin/vgit.nvim"] = c("tanvirtin/vgit.nvim"),
+	["nvim-neo-tree/neo-tree.nvim"] = c({
+		"nvim-neo-tree/neo-tree.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+			"s1n7ax/nvim-window-picker", -- Allows selecting which window is used
+		},
+	}),
 	---- UI
 	["catppuccin/nvim"] = p( -- Color Scheme
 		100,

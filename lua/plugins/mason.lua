@@ -53,7 +53,7 @@ local sources = {
 }
 
 null_ls.setup({
-	sources = tbl.merge_lists(sources, override_settings.null_ls),
+	sources = tbl.merge_lists(sources, override_settings.null_ls(null_ls)),
 })
 
 mason_null_ls.setup({

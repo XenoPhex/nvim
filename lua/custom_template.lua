@@ -13,7 +13,9 @@ return {
 		-- language_server_name = { LSP Config },
 		-- LSP Config: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 	},
-	null_ls = {
-		-- null_ls Sources: https://github.com/jose-elias-alvarez/null-ls.nvim#setup
-	},
+	null_ls = function(null_ls)
+		return {
+			-- null_ls Sources: https://github.com/jose-elias-alvarez/null-ls.nvim#setup
+		}
+	end,
 }

@@ -40,12 +40,20 @@ cmp.setup({
 	},
 	preselect = cmp.PreselectMode.Item, -- don't select
 	formatting = {
-		format = lspkind.cmp_format({
-			mode = "symbol_text", -- show only symbol annotations
-			maxwidth = 100, -- prevent the popup from showing more than provided characters (e.g 100 will not show more than 50 characters)
-			ellipsis_char = "", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
-			symbol_map = { Copilot = "", Suggestion = "" },
-		}),
+		fields = { "kind", "abbr", "menu" },
+		format = function(entry, vim_item)
+			local kind = require("lspkind").cmp_format({
+				mode = "symbol_text",
+				maxwidth = 50,
+				ellipsis_char = "", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
+				symbol_map = { Suggestion = "" },
+			})(entry, vim_item)
+			local strings = vim.split(kind.kind, "%s", { trimempty = true })
+			kind.kind = " " .. (strings[1] or "") .. " "
+			kind.menu = "    (" .. (strings[2] or "") .. ")"
+
+			return kind
+		end,
 	},
 	performance = {
 		debounce = 20,
@@ -60,13 +68,13 @@ cmp.setup({
 		["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }), { "i", "c" }),
 		["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
 		["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
-		["<M-space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+		["<M-space>"] = cmp.mapping(cmp.mapping.complete({}), { "i", "c" }),
 		["<C-y>"] = cmp.mapping.confirm({ select = true }),
 		["<C-c>"] = cmp.mapping({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),
-		["<C-l>"] = cmp.mapping(function(fallback)
+		["<C-l>"] = cmp.mapping(function(_)
 			if cmp.visible() then
 				cmp.confirm({ select = true })
 			else

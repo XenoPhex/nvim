@@ -62,7 +62,7 @@ local plugins = {
 			"nvim-tree/nvim-web-devicons",
 		},
 	}),
-	["nvim-lualine/lualine.nvim"] = c({
+	["nvim-lualine/lualine.nvim"] = c({ -- Bottom bar display
 		"nvim-lualine/lualine.nvim",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
@@ -147,7 +147,7 @@ local plugins = {
 		dependencies = {
 			"kevinhwang91/promise-async",
 			"nvim-treesitter/nvim-treesitter",
-			"luukvbaal/statuscol.nvim",
+			"luukvbaal/statuscol.nvim", -- integrate with the gutter properly
 		},
 	}),
 	-- Look into https://github.com/simrat39/symbols-outline.nvim for file outline

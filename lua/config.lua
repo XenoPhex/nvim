@@ -11,6 +11,12 @@ _G.global_settings = {
 	log = { level = "INFO" },
 }
 
+-- Configure python based on the virtualenv
+local virtualenv = os.getenv("VIRTUAL_ENV")
+if virtualenv then
+	vim.g["python3_host_prog"] = virtualenv .. "/bin/python"
+end
+
 _G.override_settings = file.load_module("custom") or require("custom_template")
 
 require("options")

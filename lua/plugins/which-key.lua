@@ -87,7 +87,7 @@ local opts = {
 }
 
 local mappings = {
-	["e"] = { "<cmd>Neotree toggle<cr>", "Explorer" },
+	["e"] = { "<cmd>Neotree toggle source=filesystem reveal=true<cr>", "Explorer" },
 	-- ["w"] = {
 	--   function()
 	--     reload("lvim.utils").save()

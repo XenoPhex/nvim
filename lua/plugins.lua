@@ -68,6 +68,13 @@ local plugins = {
 			"nvim-tree/nvim-web-devicons",
 		},
 	}),
+	["glepnir/dashboard-nvim"] = c({
+		"glepnir/dashboard-nvim",
+		event = "VimEnter",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+	}),
 	---- Language Setup
 	--> 1. Setup Snippets
 	["L3MON4D3/LuaSnip"] = { -- Base set of snippets

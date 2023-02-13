@@ -15,6 +15,7 @@ catppuccin.setup({
 			highlight = true,
 		},
 		cmp = true,
+		dashboard = true,
 		mason = true,
 		notify = true,
 		telescope = true,

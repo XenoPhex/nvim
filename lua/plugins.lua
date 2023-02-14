@@ -68,7 +68,6 @@ local plugins = {
 		"nvim-lualine/lualine.nvim",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
-			"arkav/lualine-lsp-progress", -- Adds LSP progress
 		},
 	}),
 	["glepnir/dashboard-nvim"] = c({ -- Dashboard for when NeoVim opens
@@ -146,6 +145,7 @@ local plugins = {
 	}),
 	["ray-x/lsp_signature.nvim"] = c("ray-x/lsp_signature.nvim"), -- Connect tab completion with LSP
 	--> 4. Language Tooling
+	["j-hui/fidget.nvim"] = c("j-hui/fidget.nvim"), -- Floating LSP Status
 	["numToStr/Comment.nvim"] = c({ -- Language aware comment helpers
 		"numToStr/Comment.nvim",
 		dependencies = "JoosepAlviste/nvim-ts-context-commentstring", -- Adds support for additional languages

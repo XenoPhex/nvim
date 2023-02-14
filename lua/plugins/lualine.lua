@@ -88,13 +88,7 @@ local float_config = {
 		lualine_a = { mode, branch },
 		lualine_b = { diagnostics },
 		lualine_c = {},
-		lualine_x = {
-			{
-				"lsp_progress",
-				percentage = { use = true },
-				display_components = { "lsp_client_name", { "title", "percentage" } },
-			},
-		},
+		lualine_x = {},
 		lualine_y = { diff },
 		lualine_z = { location, "progress", filetype },
 	},

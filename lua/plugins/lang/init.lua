@@ -14,8 +14,9 @@ end
 
 local function load_languages()
 	local langs = {
-		lua_ls = require("plugins.lang.lua_ls"),
 		gopls = require("plugins.lang.gopls"),
+		lua_ls = require("plugins.lang.lua_ls"),
+		yamlls = require("plugins.lang.yamlls"),
 	}
 
 	local all_lang = tbl.merge(langs, override_settings.lsp)

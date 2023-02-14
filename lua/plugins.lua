@@ -68,7 +68,7 @@ local plugins = {
 			"nvim-tree/nvim-web-devicons",
 		},
 	}),
-	["glepnir/dashboard-nvim"] = c({
+	["glepnir/dashboard-nvim"] = c({ -- Dashboard for when NeoVim opens
 		"glepnir/dashboard-nvim",
 		event = "VimEnter",
 		dependencies = {

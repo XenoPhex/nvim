@@ -41,7 +41,8 @@ local plugins = {
 			"s1n7ax/nvim-window-picker", -- Allows selecting which window is used
 		},
 	}),
-	["fladson/vim-kitty"] = "fladson/vim-kitty",
+	["fladson/vim-kitty"] = "fladson/vim-kitty", -- Kitty Config helper
+	["tpope/vim-fugitive"] = "tpope/vim-fugitive", -- Adds NeoVim Git commands
 	---- UI
 	["catppuccin/nvim"] = p( -- Color Scheme
 		100,

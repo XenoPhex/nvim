@@ -41,6 +41,7 @@ local plugins = {
 			"s1n7ax/nvim-window-picker", -- Allows selecting which window is used
 		},
 	}),
+	["fladson/vim-kitty"] = "fladson/vim-kitty",
 	---- UI
 	["catppuccin/nvim"] = p( -- Color Scheme
 		100,
@@ -158,7 +159,7 @@ local plugins = {
 			"luukvbaal/statuscol.nvim", -- integrate with the gutter properly
 		},
 	}),
-	["fladson/vim-kitty"] = "fladson/vim-kitty",
+	["folke/trouble.nvim"] = c("folke/trouble.nvim"), -- Error/Warning terminal
 	-- Look into https://github.com/simrat39/symbols-outline.nvim for file outline
 }
 

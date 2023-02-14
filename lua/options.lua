@@ -41,6 +41,7 @@ local options = {
 	ignorecase = true, -- Case insensitive search
 	smartcase = true, -- ... but case sensitive when uc present
 	smartindent = true, -- ... but case sensitive when uc present
+	spell = true,
 	sessionoptions = {
 		"blank",
 		"buffers",

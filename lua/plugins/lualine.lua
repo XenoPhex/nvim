@@ -92,7 +92,7 @@ local float_config = {
 			{
 				"lsp_progress",
 				percentage = { use = true },
-				display_components = { "lsp_client_name", { "title", "percentage", "message" } },
+				display_components = { "lsp_client_name", { "title", "percentage" } },
 			},
 		},
 		lualine_y = { diff },

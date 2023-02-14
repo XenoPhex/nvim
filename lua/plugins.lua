@@ -157,6 +157,7 @@ local plugins = {
 			"luukvbaal/statuscol.nvim", -- integrate with the gutter properly
 		},
 	}),
+	["fladson/vim-kitty"] = "fladson/vim-kitty",
 	-- Look into https://github.com/simrat39/symbols-outline.nvim for file outline
 }
 

@@ -66,6 +66,7 @@ local plugins = {
 		"nvim-lualine/lualine.nvim",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
+			"arkav/lualine-lsp-progress", -- Adds LSP progress
 		},
 	}),
 	["glepnir/dashboard-nvim"] = c({ -- Dashboard for when NeoVim opens

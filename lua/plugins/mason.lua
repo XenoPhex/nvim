@@ -34,11 +34,33 @@ mason_lsp.setup({
 
 require("plugins.lang")
 
+-- List of builtins: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 local sources = {
 	-- null_ls.builtins.code_actions.refactoring, need to figure out why this is breaking
+	null_ls.builtins.code_actions.cspell.with({
+		disabled_filetypes = { "go" },
+	}),
 	null_ls.builtins.diagnostics.alex,
 	null_ls.builtins.diagnostics.checkmake,
-	null_ls.builtins.diagnostics.golangci_lint,
+	null_ls.builtins.diagnostics.cspell.with({
+		disabled_filetypes = { "go" },
+	}),
+	null_ls.builtins.diagnostics.golangci_lint.with({
+		args = {
+			"run",
+			"--fix=false",
+			"--out-format=json",
+			"--path-prefix",
+			"$ROOT",
+			-- "-E errorlint",
+			"-Egodot",
+			"-Emisspell",
+			"-Enonamedreturns",
+			"-Eunconvert",
+			"-Ewastedassign",
+		},
+	}),
+	null_ls.builtins.diagnostics.gospel,
 	null_ls.builtins.diagnostics.hadolint,
 	null_ls.builtins.diagnostics.markdownlint,
 	null_ls.builtins.diagnostics.shellcheck,

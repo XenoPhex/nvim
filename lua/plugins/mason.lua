@@ -43,7 +43,11 @@ local sources = {
 	null_ls.builtins.diagnostics.alex,
 	null_ls.builtins.diagnostics.checkmake,
 	null_ls.builtins.diagnostics.cspell.with({
-		disabled_filetypes = { "go" },
+		filetypes = {
+			"go",
+			"markdown",
+			"python",
+		},
 	}),
 	null_ls.builtins.diagnostics.golangci_lint.with({
 		args = {
@@ -52,15 +56,16 @@ local sources = {
 			"--out-format=json",
 			"--path-prefix",
 			"$ROOT",
-			-- "-E errorlint",
+			"-Eerrorlint",
 			"-Egodot",
+			"-Egoimports",
 			"-Emisspell",
 			"-Enonamedreturns",
+			"-Erevive",
 			"-Eunconvert",
 			"-Ewastedassign",
 		},
 	}),
-	null_ls.builtins.diagnostics.gospel,
 	null_ls.builtins.diagnostics.hadolint,
 	null_ls.builtins.diagnostics.markdownlint,
 	null_ls.builtins.diagnostics.shellcheck,

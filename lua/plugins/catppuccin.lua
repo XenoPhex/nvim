@@ -16,6 +16,7 @@ catppuccin.setup({
 		},
 		cmp = true,
 		dashboard = true,
+		lsp_trouble = true,
 		mason = true,
 		notify = true,
 		telescope = true,

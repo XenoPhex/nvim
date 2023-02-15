@@ -197,7 +197,7 @@ local function load_plugins()
 	-- load lazy
 	require("lazy").setup({
 		spec = all_plugins,
-		concurrency = 5,
+		concurrency = 15,
 		install = { colorscheme = { "catppuccin" } },
 		defaults = { lazy = false, version = "*" },
 		checker = {

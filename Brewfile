@@ -1,6 +1,5 @@
 brew "checkmake"
 brew "fd"
-brew "git"
-brew "golangci-lint"
+brew "fzf"
 brew "npm"
 brew "ripgrep"

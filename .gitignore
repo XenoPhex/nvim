@@ -42,5 +42,6 @@ luac.out
 # Ignore custom settings
 lua/custom.lua
 
-# Ignore brew lock
+# Ignore lock files
 Brewfile.lock.json
+lazy-lock.json

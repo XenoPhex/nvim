@@ -1,3 +1,5 @@
+local starts_with = require("utils.strings").starts_with
+
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
 	return
@@ -14,11 +16,14 @@ local dropdown = themes.get_dropdown({
 })
 
 -- See
--- local builtins = require("telescope.builtin")
--- local picker_config = {}
--- for b, _ in pairs(builtins) do
--- 	picker_config[b] = { fname_width = 30 }
--- end
+local lsp_commands = {}
+for b, _ in pairs(require("telescope.builtin")) do
+	if starts_with(tostring(b), "lsp_") then
+		lsp_commands[b] = {
+			fname_width = 70,
+		}
+	end
+end
 
 telescope.setup({
 	active = true,
@@ -28,7 +33,7 @@ telescope.setup({
 		entry_prefix = "  ",
 		initial_mode = "insert",
 		selection_strategy = "reset",
-		path_display = { "truncate" },
+		path_display = { "smart" },
 		vimgrep_arguments = {
 			"rg",
 			"--color=never",
@@ -75,14 +80,12 @@ telescope.setup({
 			"vendor/*",
 		},
 	}),
-	pickers = {
-		lsp_definitions = tbl.merge(dropdown, {
-			fname_width = 60,
-		}),
+	pickers = tbl.merge(lsp_commands, {
 		find_files = tbl.merge(dropdown, {
 			hidden = true,
 			find_command = {
 				"fd",
+				"--smart",
 				"--color=never",
 				"--exclude=git",
 				"--follow",
@@ -111,7 +114,7 @@ telescope.setup({
 		colorscheme = {
 			enable_preview = true,
 		},
-	},
+	}),
 })
 
 require("telescope").load_extension("notify")

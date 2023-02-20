@@ -4,6 +4,8 @@ if not status_ok then
 	return
 end
 
+fzf_defaults = require("fzf-lua.defaults").defaults
+
 fzf.setup({
 	winopts = {
 		preview = {
@@ -11,5 +13,8 @@ fzf.setup({
 			wrap = "wrap",
 			layout = "vertical",
 		},
+	},
+	files = {
+		fd_opts = fzf_defaults.files.fd_opts .. " --no-ignore", -- Include git ignored files
 	},
 })

@@ -5,6 +5,9 @@ end
 
 catppuccin.setup({
 	flavour = "latte",
+	dim_inactive = {
+		enabled = true,
+	},
 	integrations = {
 		-- For integrations see: https://github.com/catppuccin/nvim#integrations
 		barbecue = {

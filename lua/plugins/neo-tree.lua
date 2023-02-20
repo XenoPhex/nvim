@@ -36,4 +36,13 @@ tree.setup({
 			["<cr>"] = "open_with_window_picker",
 		},
 	},
+	filesystem = {
+		filtered_items = {
+			visible = true,
+			never_show = {
+				".git",
+				".DS_Store",
+			},
+		},
+	},
 })

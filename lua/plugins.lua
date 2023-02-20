@@ -168,7 +168,12 @@ local plugins = {
 		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 		branch = "main",
 	}), -- lsp line display
-	-- Look into https://github.com/simrat39/symbols-outline.nvim for file outline
+	["simrat39/symbols-outline.nvim"] = c({ -- A tree like view for symbols in a given file
+		"simrat39/symbols-outline.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	}),
 }
 
 local function load_plugins()

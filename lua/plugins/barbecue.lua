@@ -6,8 +6,8 @@ end
 barbecue.setup({
 	theme = "catppuccin",
 	exclude_filetypes = { "gitcommit", "toggleterm", "neo-tree" },
-	show_modified = false,
-	show_dirname = false,
+	show_modified = true,
+	show_dirname = true,
 	kinds = {
 		File = "", -- File
 		Module = "", -- Module

@@ -40,6 +40,7 @@ local diagnostics = {
 		virtual_text = false,
 		signs = false,
 		update_in_insert = false,
+		virtual_lines = false,
 	},
 	on = {
 		float = {
@@ -51,6 +52,7 @@ local diagnostics = {
 		severity_sort = true,
 		update_in_insert = true,
 		virtual_text = false,
+		virtual_lines = true,
 	},
 }
 return diagnostics

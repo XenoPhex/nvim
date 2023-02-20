@@ -105,6 +105,7 @@ local plugins = {
 			"nvim-treesitter/nvim-treesitter-textobjects", -- Adds additional language parsing mechanisms
 			"m-demare/hlargs.nvim", -- Highlight arguments' definitions and usages
 			"rcarriga/nvim-notify",
+			"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 		},
 	}),
 	["neovim/nvim-lspconfig"] = c({ -- Contains basic LSP configurations
@@ -162,6 +163,10 @@ local plugins = {
 		},
 	}),
 	["folke/trouble.nvim"] = c("folke/trouble.nvim"), -- Error/Warning terminal
+	["git.sr.ht/~whynothugo/lsp_lines.nvim"] = c({
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+		branch = "main",
+	}), -- lsp line display
 	-- Look into https://github.com/simrat39/symbols-outline.nvim for file outline
 }
 

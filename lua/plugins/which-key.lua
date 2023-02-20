@@ -106,12 +106,12 @@ local mappings = {
 			"Recent files",
 		},
 	},
-	["s"] = {
-		name = "[s]earch",
-		["s"] = { "<cmd>Telescope live_grep<cr>", "Find text (live)" },
-		["w"] = { "<cmd>Telescope grep_string<cr>", "Find text at cursor (live)" },
-		["g"] = "Find text",
-	},
+	-- ["s"] = {
+	-- 	name = "[s]earch",
+	-- 	["s"] = { "<cmd>Telescope live_grep<cr>", "Find text (live)" },
+	-- 	["w"] = { "<cmd>Telescope grep_string<cr>", "Find text at cursor (live)" },
+	-- 	["g"] = "Find text",
+	-- },
 	["<Tab>"] = { "<c-6>", "Move back and forth" },
 	["="] = { "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
 	-- ["t"] = {
@@ -123,22 +123,22 @@ local mappings = {
 	--   ["d"] = { [[<cmd>lua require("neotest").run.run_last({strategy = "dap"})<cr>]], "Debug Last" },
 	--   ["o"] = { [[<cmd>lua require("neotest").output.open({ enter = true })<cr>]], "Show test output" },
 	-- },
-	["k"] = {
-		name = "tas[k]s",
-		["r"] = { "<cmd>OverseerRun<cr>", "Run task" },
-		["t"] = { "<cmd>OverseerToggle<cr>", "Toggle tasks window" },
-		["a"] = { "<cmd>OverseerTaskAction<cr>", "Select a task action to run" },
-		["i"] = { "<cmd>OverseerInfo<cr>", "Show tasks info" },
-	},
-	["j"] = {
-		name = "[l]jumps",
-		["j"] = { "<cmd>HopAnywhere<cr>", "Jump anywhere" },
-		["w"] = { "<cmd>HopWord<cr>", "Jump words" },
-		["p"] = { "<cmd>HopPattern<cr>", "Jump patterns" },
-		["l"] = { "<cmd>HopLineStart<cr>", "Jump lines" },
-		["c"] = { "<cmd>HopChar1<cr>", "Jump character" },
-		["v"] = { "<cmd>HopVertical<cr>", "Jump vertically" },
-	},
+	-- ["k"] = {
+	-- 	name = "tas[k]s",
+	-- 	["r"] = { "<cmd>OverseerRun<cr>", "Run task" },
+	-- 	["t"] = { "<cmd>OverseerToggle<cr>", "Toggle tasks window" },
+	-- 	["a"] = { "<cmd>OverseerTaskAction<cr>", "Select a task action to run" },
+	-- 	["i"] = { "<cmd>OverseerInfo<cr>", "Show tasks info" },
+	-- },
+	-- ["j"] = {
+	-- 	name = "[l]jumps",
+	-- 	["j"] = { "<cmd>HopAnywhere<cr>", "Jump anywhere" },
+	-- 	["w"] = { "<cmd>HopWord<cr>", "Jump words" },
+	-- 	["p"] = { "<cmd>HopPattern<cr>", "Jump patterns" },
+	-- 	["l"] = { "<cmd>HopLineStart<cr>", "Jump lines" },
+	-- 	["c"] = { "<cmd>HopChar1<cr>", "Jump character" },
+	-- 	["v"] = { "<cmd>HopVertical<cr>", "Jump vertically" },
+	-- },
 	["l"] = {
 		name = "[l]sp",
 		["a"] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
@@ -170,9 +170,9 @@ which_key.register({
 }, tbl.merge(opts, { mode = "x" }))
 
 local g_mappings = {
-	["d"] = { "<cmd>Telescope lsp_definitions<cr>", "Go to definition" },
-	["r"] = { "<cmd>Telescope lsp_references<cr>", "Go to references" },
-	["i"] = { "<cmd>Telescope lsp_implementations<cr>", "Go to implementations" },
+	["d"] = { "<cmd>FzfLua lsp_definitions<cr>", "Go to definition" },
+	["r"] = { "<cmd>FzfLua lsp_references<cr>", "Go to references" },
+	["i"] = { "<cmd>FzfLua lsp_implementations<cr>", "Go to implementations" },
 	["l"] = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Open float" },
 }
 -- Go to [g]

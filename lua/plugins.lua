@@ -106,6 +106,7 @@ local plugins = {
 			"m-demare/hlargs.nvim", -- Highlight arguments' definitions and usages
 			"rcarriga/nvim-notify",
 			"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+			"b0o/schemastore.nvim", -- contains various schema configs
 		},
 	}),
 	["neovim/nvim-lspconfig"] = c({ -- Contains basic LSP configurations

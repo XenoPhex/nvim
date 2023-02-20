@@ -16,6 +16,7 @@ local function load_languages()
 	local langs = {
 		gopls = require("plugins.lang.gopls"),
 		lua_ls = require("plugins.lang.lua_ls"),
+		jsonls = require("plugins.lang.jsonls"),
 		yamlls = require("plugins.lang.yamlls"),
 	}
 

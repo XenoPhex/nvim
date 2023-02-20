@@ -40,7 +40,7 @@ luac.out
 *.hex
 
 # Ignore custom settings
-lua/custom.lua
+lua/custom*
 
 # Ignore lock files
 Brewfile.lock.json

@@ -34,6 +34,12 @@ mason_lsp.setup({
 
 require("plugins.lang")
 
+local cspell_extra_args = {}
+if not override_settings.cspell_config then
+	table.insert(cspell_extra_args, "--config")
+	table.insert(cspell_extra_args, override_settings.cspell_config)
+end
+
 -- List of builtins: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 local sources = {
 	-- null_ls.builtins.code_actions.refactoring, need to figure out why this is breaking
@@ -48,6 +54,7 @@ local sources = {
 			"markdown",
 			"python",
 		},
+		extra_args = cspell_extra_args,
 	}),
 	null_ls.builtins.diagnostics.golangci_lint.with({
 		args = {

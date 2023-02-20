@@ -1,5 +1,6 @@
 -- Do not modify this file! Instead copy it to a custom.lua file.
 return {
+	cspell_config = nil,
 	plugins = {
 		-- format should look like:
 		-- ["plugin/name"] = { Lazy style config },

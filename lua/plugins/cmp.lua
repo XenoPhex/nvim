@@ -42,7 +42,7 @@ cmp.setup({
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
 		format = function(entry, vim_item)
-			local kind = require("lspkind").cmp_format({
+			local kind = lspkind.cmp_format({
 				mode = "symbol_text",
 				maxwidth = 50,
 				ellipsis_char = "", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
@@ -81,6 +81,19 @@ cmp.setup({
 				cmp.complete()
 			end
 		end, { "i", "c" }),
+		["<enter>"] = cmp.mapping(function(fallback)
+			-- This little snippet will confirm with entry, and if no entry is selected, will insert a new line
+			if cmp.visible() then
+				local entry = cmp.get_selected_entry()
+				if entry then
+					cmp.confirm()
+				else
+					fallback()
+				end
+			else
+				fallback()
+			end
+		end, { "i", "s", "c" }),
 		["<Tab>"] = cmp.mapping(function(fallback)
 			-- This little snippet will confirm with tab, and if no entry is selected, will confirm the first item
 			if cmp.visible() then

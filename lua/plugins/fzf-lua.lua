@@ -4,7 +4,7 @@ if not status_ok then
 	return
 end
 
-fzf_defaults = require("fzf-lua.defaults").defaults
+local fzf_defaults = require("fzf-lua.defaults").defaults
 
 fzf.setup({
 	winopts = {
@@ -18,3 +18,5 @@ fzf.setup({
 		fd_opts = fzf_defaults.files.fd_opts .. " --no-ignore", -- Include git ignored files
 	},
 })
+
+vim.cmd("FzfLua register_ui_select") -- register fzf-lua as the UI interface for vim.ui.select

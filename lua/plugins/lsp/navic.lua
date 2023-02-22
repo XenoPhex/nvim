@@ -24,13 +24,21 @@
 local M = {}
 
 M.on_attach = function(client, buffer)
-  local status_ok, navic = pcall(require, "nvim-navic")
-  if not status_ok then
-    return
-  end
-  if client.server_capabilities.documentSymbolProvider then
-    navic.attach(client, buffer)
-  end
+	local status_ok, navic = pcall(require, "nvim-navic")
+	if not status_ok then
+		return
+	end
+	if client.server_capabilities.documentSymbolProvider then
+		navic.attach(client, buffer)
+
+		vim.api.nvim_create_autocmd("BufEnter", {
+			callback = function()
+				if vim.api.nvim_buf_line_count(0) > 500 then
+					vim.b.navic_lazy_update_context = true
+				end
+			end,
+		})
+	end
 end
 
 return M

@@ -12,9 +12,9 @@ biscuits.setup({
 		show_on_start = true,
 	},
 	language_config = {
-		-- python = {
-		-- 	disabled = true,
-		-- },
+		yaml = { -- Disable on yaml cuz of the slows
+			disabled = true,
+		},
 		help = {
 			disabled = true,
 		},

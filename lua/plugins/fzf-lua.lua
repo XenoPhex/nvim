@@ -17,6 +17,10 @@ fzf.setup({
 	files = {
 		fd_opts = fzf_defaults.files.fd_opts .. " --no-ignore", -- Include git ignored files
 	},
+	lsp = {
+		ignore_current_line = true,
+		jump_to_single_result = true,
+	},
 })
 
 vim.cmd("FzfLua register_ui_select") -- register fzf-lua as the UI interface for vim.ui.select

@@ -79,6 +79,7 @@ local plugins = {
 		},
 	}),
 	["ibhagwan/fzf-lua"] = c("ibhagwan/fzf-lua"),
+	["mrjones2014/legendary.nvim"] = c("mrjones2014/legendary.nvim"),
 	---- Language Setup
 	--> 1. Setup Snippets
 	["L3MON4D3/LuaSnip"] = { -- Base set of snippets

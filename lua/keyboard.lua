@@ -17,3 +17,5 @@ keymap("n", "<Esc>", ":noh<CR>", opts)
 
 -- Current file's path in command mode
 keymap("c", "%%", [[expand('%:h').'/']], { expr = true })
+
+return {}

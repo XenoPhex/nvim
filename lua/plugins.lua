@@ -154,7 +154,10 @@ local plugins = {
 		dependencies = "JoosepAlviste/nvim-ts-context-commentstring", -- Adds support for additional languages
 	}),
 	["windwp/nvim-autopairs"] = c("windwp/nvim-autopairs"), -- Smart pairing for (["...etc.
-	["code-biscuits/nvim-biscuits"] = c("code-biscuits/nvim-biscuits"),
+	["code-biscuits/nvim-biscuits"] = c({
+		"XenoPhex/nvim-biscuits",
+		branch = "switch-deprecated-calls",
+	}),
 	["kevinhwang91/nvim-ufo"] = c({
 		"kevinhwang91/nvim-ufo",
 		dependencies = {

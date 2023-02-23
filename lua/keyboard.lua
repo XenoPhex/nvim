@@ -10,7 +10,7 @@ keymap("n", "<C-p>", "<cmd>lua require'fzf-lua'.files()<cr>", opts)
 keymap("n", "<C-f>", "<cmd>lua require'fzf-lua'.live_grep()<cr>", opts)
 
 -- Hit Return to save
-keymap("n", "<Enter>", "<cmd>wa<cr>", opts)
+keymap("n", "<Enter>", "<cmd>lua require('utils.save').save()<cr>", opts)
 
 -- No highlight
 keymap("n", "<Esc>", ":noh<CR>", opts)

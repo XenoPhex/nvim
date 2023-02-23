@@ -43,6 +43,7 @@ local plugins = {
 	}),
 	["fladson/vim-kitty"] = "fladson/vim-kitty", -- Kitty Config helper
 	["tpope/vim-fugitive"] = "tpope/vim-fugitive", -- Adds NeoVim Git commands
+	["wsdjeg/vim-fetch"] = "wsdjeg/vim-fetch", -- Adds line number (ie file/path:num) parsing to various commands
 	---- UI
 	["catppuccin/nvim"] = p( -- Color Scheme
 		100,

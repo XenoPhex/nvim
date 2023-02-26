@@ -31,7 +31,10 @@ local plugins = {
 	---- General Utilities
 	["nvim-lua/plenary.nvim"] = p(100, "nvim-lua/plenary.nvim"), -- Common Lua functions
 	["folke/which-key.nvim"] = c("folke/which-key.nvim"),
-	["tanvirtin/vgit.nvim"] = c("tanvirtin/vgit.nvim"),
+	["tanvirtin/vgit.nvim"] = c({
+		"tanvirtin/vgit.nvim",
+		event = "BufReadPre",
+	}),
 	["nvim-neo-tree/neo-tree.nvim"] = c({
 		"nvim-neo-tree/neo-tree.nvim",
 		dependencies = {
@@ -41,8 +44,14 @@ local plugins = {
 			"s1n7ax/nvim-window-picker", -- Allows selecting which window is used
 		},
 	}),
-	["fladson/vim-kitty"] = "fladson/vim-kitty", -- Kitty Config helper
-	["tpope/vim-fugitive"] = "tpope/vim-fugitive", -- Adds NeoVim Git commands
+	["fladson/vim-kitty"] = {
+		"fladson/vim-kitty", -- Kitty Config helper
+		event = "BufReadPre kitty.conf",
+	},
+	["tpope/vim-fugitive"] = {
+		"tpope/vim-fugitive", -- Adds NeoVim Git commands
+		event = "BufReadPre",
+	},
 	["wsdjeg/vim-fetch"] = "wsdjeg/vim-fetch", -- Adds line number (ie file/path:num) parsing to various commands
 	---- UI
 	["catppuccin/nvim"] = p( -- Color Scheme
@@ -56,6 +65,7 @@ local plugins = {
 	-- TODO: Look into https://github.com/nvim-telescope/telescope-ui-select.nvim
 	["nvim-telescope/telescope.nvim"] = c({ -- Fuzzy finder for files, buffer, etc.
 		"nvim-telescope/telescope.nvim",
+		event = "BufReadPre",
 	}),
 	["nvim-tree/nvim-web-devicons"] = c("nvim-tree/nvim-web-devicons"), -- More icons!
 	["utilyre/barbecue.nvim"] = c({ -- Location bar
@@ -78,7 +88,12 @@ local plugins = {
 			"nvim-tree/nvim-web-devicons",
 		},
 	}),
-	["ibhagwan/fzf-lua"] = c("ibhagwan/fzf-lua"),
+	["ibhagwan/fzf-lua"] = c({
+		"ibhagwan/fzf-lua",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	}),
 	["mrjones2014/legendary.nvim"] = c("mrjones2014/legendary.nvim"),
 	---- Language Setup
 	--> 1. Setup Snippets
@@ -102,6 +117,7 @@ local plugins = {
 		build = function(_)
 			vim.cmd("TSUpdate")
 		end,
+		lazy = false,
 		dependencies = {
 			"nvim-treesitter/playground", -- Library used to interact / debug treesitter
 			"mrjones2014/nvim-ts-rainbow", -- Rainbow braces
@@ -158,10 +174,15 @@ local plugins = {
 		"numToStr/Comment.nvim",
 		dependencies = "JoosepAlviste/nvim-ts-context-commentstring", -- Adds support for additional languages
 	}),
-	["windwp/nvim-autopairs"] = c("windwp/nvim-autopairs"), -- Smart pairing for (["...etc.
+	["windwp/nvim-autopairs"] = c({ -- Smart pairing for (["...etc.
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		dependencies = "hrsh7th/nvim-cmp",
+	}),
 	["code-biscuits/nvim-biscuits"] = c({
 		"XenoPhex/nvim-biscuits",
 		branch = "switch-deprecated-calls",
+		event = "InsertEnter",
 	}),
 	["kevinhwang91/nvim-ufo"] = c({
 		"kevinhwang91/nvim-ufo",

@@ -99,6 +99,9 @@ local plugins = {
 	["nvim-treesitter/nvim-treesitter"] = c({ -- Core language parser
 		"nvim-treesitter/nvim-treesitter",
 		branch = "master",
+		build = function(_)
+			vim.cmd("TSUpdate")
+		end,
 		dependencies = {
 			"nvim-treesitter/playground", -- Library used to interact / debug treesitter
 			"mrjones2014/nvim-ts-rainbow", -- Rainbow braces

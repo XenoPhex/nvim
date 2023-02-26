@@ -79,6 +79,12 @@ return {
 		":Telescope notify<cr>",
 		description = "Display notifications",
 	},
+	{
+		"<leader>s",
+		":'<,'>sort i<cr>",
+		description = "Sort selected list",
+		mode = "v",
+	},
 
 	-- Keep indenting
 	{ ">", ">gv", mode = "x" },

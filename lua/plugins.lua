@@ -46,7 +46,7 @@ local plugins = {
 	["wsdjeg/vim-fetch"] = "wsdjeg/vim-fetch", -- Adds line number (ie file/path:num) parsing to various commands
 	---- UI
 	["catppuccin/nvim"] = p( -- Color Scheme
-		100,
+		1000,
 		c({
 			"catppuccin/nvim",
 			name = "catppuccin",

@@ -103,6 +103,20 @@ return {
 	},
 	{ "gF", description = "Go to file under cursor (includes ':line number:character number')" },
 
+	-- Folding
+	{
+		"zR",
+		":lua require('ufo').openAllFolds()<cr>",
+		description = "Open all folds",
+		mode = "n",
+	},
+	{
+		"zM",
+		":lua require('ufo').closeAllFolds()<cr>",
+		description = "Close all folds",
+		mode = "n",
+	},
+
 	-- LSP Features
 	{
 		"gd",

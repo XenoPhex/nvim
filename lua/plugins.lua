@@ -62,7 +62,6 @@ local plugins = {
 		})
 	),
 	["rcarriga/nvim-notify"] = p(100, c("rcarriga/nvim-notify")), -- Pop-up notifications
-	-- TODO: Look into https://github.com/nvim-telescope/telescope-ui-select.nvim
 	["nvim-telescope/telescope.nvim"] = c({ -- Fuzzy finder for files, buffer, etc.
 		"nvim-telescope/telescope.nvim",
 	}),

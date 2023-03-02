@@ -178,7 +178,7 @@ local plugins = {
 		event = "InsertEnter",
 		dependencies = "hrsh7th/nvim-cmp",
 	}),
-	["code-biscuits/nvim-biscuits"] = c({
+	["code-biscuits/nvim-biscuits"] = c({ -- Displays opening block on closing block lines
 		"XenoPhex/nvim-biscuits",
 		branch = "switch-deprecated-calls",
 		event = "InsertEnter",

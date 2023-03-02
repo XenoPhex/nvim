@@ -73,6 +73,9 @@ local options = {
 	fillchars = "vert:│,stl: ,stlnc: ",
 	writebackup = false, -- Disable making a backup before overwriting a file
 	cursorline = true, -- Highlight the text line of the cursor
+	-- Enable Spelling
+	spell = true,
+	spelllang = "en_us",
 }
 
 for k, v in pairs(options) do

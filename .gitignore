@@ -39,6 +39,9 @@ luac.out
 *.x86_64
 *.hex
 
+# Ignore Spell files
+spell
+
 # Ignore custom settings
 lua/custom*
 

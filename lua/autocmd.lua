@@ -57,3 +57,11 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
         vim.cmd([[set formatoptions-=cro]])
     end,
 })
+
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+    group = augroup,
+    pattern = { "*.add" },
+    callback = function()
+        vim.cmd("mkspell! %")
+    end,
+})

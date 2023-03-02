@@ -118,7 +118,6 @@ local plugins = {
 		lazy = false,
 		dependencies = {
 			"nvim-treesitter/playground", -- Library used to interact / debug treesitter
-			"mrjones2014/nvim-ts-rainbow", -- Rainbow braces
 			"RRethy/nvim-treesitter-endwise", -- Adds "end"/closes blocks
 			"RRethy/nvim-treesitter-textsubjects", -- Adds block aware visual selection expansion
 			"nvim-treesitter/nvim-treesitter-textobjects", -- Adds additional language parsing mechanisms
@@ -126,6 +125,7 @@ local plugins = {
 			"rcarriga/nvim-notify",
 			"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 			"b0o/schemastore.nvim", -- contains various schema configs
+			"https://gitlab.com/HiPhish/nvim-ts-rainbow2.git", -- Rainbow braces
 		},
 	}),
 	["neovim/nvim-lspconfig"] = c({ -- Contains basic LSP configurations

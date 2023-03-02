@@ -76,6 +76,10 @@ require("nvim-treesitter.configs").setup({
 		enable = true,
 		extended_mode = false,
 		disable = { "html" },
+		-- Which query to use for finding delimiters
+		query = "rainbow-parens",
+		-- Highlight the entire buffer all at once
+		strategy = require("ts-rainbow.strategy.global"),
 	},
 	textobjects = {
 		select = {

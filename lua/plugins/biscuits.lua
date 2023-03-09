@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 biscuits.setup({
+	on_events = { "InsertLeave", "CursorHold", "CursorHoldI" },
 	default_config = {
 		cursor_line_only = true,
 		max_length = 60,

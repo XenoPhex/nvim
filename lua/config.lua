@@ -12,6 +12,16 @@ M.setup_globals = function()
 	_G.global_settings = {
 		theme = "catppuccin",
 		log = { level = "INFO" },
+		ignore_ft = {
+			"alpha",
+			"fzf",
+			"neo-tree",
+			"neo-tree-popup",
+			"notify",
+			"NvimTree",
+			"quickfix",
+			"TelescopePrompt",
+		},
 	}
 	-- Configure python based on the virtualenv
 	local virtualenv = os.getenv("VIRTUAL_ENV")

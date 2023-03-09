@@ -47,7 +47,7 @@ return {
 		description = "Search in recently opened files",
 	},
 	{
-		"<leader>s",
+		"<leader>f",
 		":FzfLua grep_cword<cr>",
 		description = "Search for word under cursor",
 	},

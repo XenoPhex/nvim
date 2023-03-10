@@ -12,7 +12,7 @@ autopairs.setup({
 		java = false,
 	},
 	enable_check_bracket_line = false,
-	disable_filetype = { "TelescopePrompt", "vim" },
+	disable_filetype = global_settings.ignore_ft,
 	fast_wrap = {
 		map = "<M-e>",
 		chars = { "{", "[", "(", '"', "'" },

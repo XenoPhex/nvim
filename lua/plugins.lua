@@ -122,7 +122,6 @@ local plugins = {
 			"RRethy/nvim-treesitter-textsubjects", -- Adds block aware visual selection expansion
 			"nvim-treesitter/nvim-treesitter-textobjects", -- Adds additional language parsing mechanisms
 			"m-demare/hlargs.nvim", -- Highlight arguments' definitions and usages
-			"rcarriga/nvim-notify",
 			"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 			"b0o/schemastore.nvim", -- contains various schema configs
 			"https://gitlab.com/HiPhish/nvim-ts-rainbow2.git", -- Rainbow braces

@@ -45,7 +45,7 @@ cmp.setup({
 			local kind = lspkind.cmp_format({
 				mode = "symbol_text",
 				maxwidth = 50,
-				ellipsis_char = "", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
+				ellipsis_char = "", -- when pop up menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
 				symbol_map = { Suggestion = "" },
 			})(entry, vim_item)
 			local strings = vim.split(kind.kind, "%s", { trimempty = true })

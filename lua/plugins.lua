@@ -34,6 +34,10 @@ local plugins = {
 	["tanvirtin/vgit.nvim"] = c({
 		"tanvirtin/vgit.nvim",
 		event = "BufReadPre",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
 	}),
 	["nvim-neo-tree/neo-tree.nvim"] = c({
 		"nvim-neo-tree/neo-tree.nvim",
@@ -49,7 +53,7 @@ local plugins = {
 		event = "BufReadPre kitty.conf",
 	},
 	["tpope/vim-fugitive"] = {
-		"tpope/vim-fugitive", -- Adds NeoVim Git commands
+		"tpope/vim-fugitive", -- Adds Neovim Git commands
 		event = "BufReadPre",
 	},
 	["wsdjeg/vim-fetch"] = "wsdjeg/vim-fetch", -- Adds line number (ie file/path:num) parsing to various commands
@@ -79,7 +83,7 @@ local plugins = {
 			"nvim-tree/nvim-web-devicons",
 		},
 	}),
-	["glepnir/dashboard-nvim"] = c({ -- Dashboard for when NeoVim opens
+	["glepnir/dashboard-nvim"] = c({ -- Dashboard for when Neovim opens
 		"glepnir/dashboard-nvim",
 		event = "VimEnter",
 		dependencies = {
@@ -156,11 +160,11 @@ local plugins = {
 		event = "InsertEnter",
 		dependencies = {
 			"onsails/lspkind.nvim", -- Formats the tab completion menu
-			"hrsh7th/cmp-nvim-lsp", -- Complete connected to NeoVim's LSP server
-			"hrsh7th/cmp-nvim-lua", -- Complete connected to NeoVim's Lua API
+			"hrsh7th/cmp-nvim-lsp", -- Complete connected to Neovim's LSP server
+			"hrsh7th/cmp-nvim-lua", -- Complete connected to Neovim's Lua API
 			"saadparwaiz1/cmp_luasnip", -- Complete snippets
 			"hrsh7th/cmp-buffer", -- Complete for current words in the buffer
-			"hrsh7th/cmp-path", -- Complete filesystem paths
+			"hrsh7th/cmp-path", -- Complete file system paths
 			"hrsh7th/cmp-cmdline", -- Enables cmp in '/' (local find) and ':' (command mode)
 		},
 	}),

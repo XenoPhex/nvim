@@ -4,6 +4,11 @@ return {
 			completion = {
 				callSnippet = "Replace",
 			},
+			format = {
+				defaultConfig = {
+					indent_style = "tab",
+				},
+			},
 			hint = {
 				enable = true,
 				arrayIndex = "Disabled",
@@ -19,9 +24,10 @@ return {
 				},
 			},
 			diagnostics = {
-				globals = { "vim", "global_settings", "override_settings" },
+				globals = { "vim", "global_settings", "override_settings", "os" },
 				neededFileStatus = {
 					["codestyle-check"] = "Opened",
+					["spell-check"] = "Opened",
 				},
 			},
 			telemetry = {

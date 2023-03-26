@@ -15,7 +15,12 @@ fzf.setup({
 		},
 	},
 	files = {
-		fd_opts = fzf_defaults.files.fd_opts .. " --no-ignore", -- Include git ignored files
+		fd_opts = fzf_defaults.files.fd_opts
+			.. " --no-ignore-vcs" -- Include git ignored files
+			.. " -E .cache" -- Exclude .cache
+			.. " -E *.class" -- Exclude Java class files
+			.. " -E .git" -- Exclude .git
+			.. " -E .gradle", -- Exclude .gradle
 	},
 	lsp = {
 		ignore_current_line = true,

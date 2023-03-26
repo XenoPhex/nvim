@@ -38,6 +38,13 @@ dashboard.setup({
 				action = "FzfLua live_grep",
 				key = "f",
 			},
+			{
+				icon = "✎ ",
+				desc = "Scratch",
+				group = "Files",
+				action = "e /tmp/scratch",
+				key = "s",
+			},
 		},
 	},
 })

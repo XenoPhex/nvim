@@ -27,7 +27,6 @@ return {
 				globals = { "vim", "global_settings", "override_settings", "os" },
 				neededFileStatus = {
 					["codestyle-check"] = "Opened",
-					["spell-check"] = "Opened",
 				},
 			},
 			telemetry = {

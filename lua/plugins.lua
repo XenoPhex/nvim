@@ -116,7 +116,7 @@ local plugins = {
 	["nvim-treesitter/nvim-treesitter"] = c({ -- Core language parser
 		"nvim-treesitter/nvim-treesitter",
 		branch = "master",
-		build = function(_)
+		build = function()
 			vim.cmd("TSUpdate")
 		end,
 		lazy = false,
@@ -181,8 +181,7 @@ local plugins = {
 		dependencies = "hrsh7th/nvim-cmp",
 	}),
 	["code-biscuits/nvim-biscuits"] = c({ -- Displays opening block on closing block lines
-		"XenoPhex/nvim-biscuits",
-		branch = "switch-deprecated-calls",
+		"code-biscuits/nvim-biscuits",
 		event = "InsertEnter",
 	}),
 	["kevinhwang91/nvim-ufo"] = c({

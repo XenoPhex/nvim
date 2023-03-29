@@ -1,6 +1,6 @@
 -- Do not modify this file! Instead copy it to a custom.lua file.
 return {
-	legendary = {}, -- legendary configuation
+	legendary = {}, -- legendary configuration
 	plugins = {
 		-- format should look like:
 		-- ["plugin/name"] = { Lazy style config },

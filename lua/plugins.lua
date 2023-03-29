@@ -97,6 +97,13 @@ local plugins = {
 		},
 	}),
 	["mrjones2014/legendary.nvim"] = c("mrjones2014/legendary.nvim"),
+	["chrisgrieser/nvim-spider"] = {
+		"chrisgrieser/nvim-spider",
+		lazy = true,
+		config = function()
+			require("spider").setup({})
+		end,
+	},
 	---- Language Setup
 	--> 1. Setup Snippets
 	["L3MON4D3/LuaSnip"] = { -- Base set of snippets

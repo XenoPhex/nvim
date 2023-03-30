@@ -39,6 +39,9 @@ luac.out
 *.x86_64
 *.hex
 
+# Ignore workspace file
+lua/.luarc.json
+
 # Ignore Spell files
 spell
 

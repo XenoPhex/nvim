@@ -42,7 +42,7 @@ dashboard.setup({
 				icon = "✎ ",
 				desc = "Scratch",
 				group = "Files",
-				action = "e /tmp/scratch",
+				action = "enew",
 				key = "s",
 			},
 		},

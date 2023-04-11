@@ -38,7 +38,6 @@ require("nvim-treesitter.configs").setup({
 		"gomod",
 		"gosum",
 		"gowork",
-		"help",
 		"java",
 		"json",
 		"lua",
@@ -49,6 +48,7 @@ require("nvim-treesitter.configs").setup({
 		"ruby",
 		"toml",
 		"vim",
+		"vimdoc",
 		"yaml",
 	}, override_settings.lang),
 	ignore_install = { "phpdoc", "tree-sitter-phpdoc" }, -- List of parsers to ignore installing

@@ -174,6 +174,13 @@ return {
 		description = "Display float",
 	},
 	{
+		"gi",
+		function()
+			require("pretty_hover").hover()
+		end,
+		description = "Display documentation below cursor",
+	},
+	{
 		"<leader>ld",
 		":TroubleToggle<cr>",
 		description = "Display diagnostic list",

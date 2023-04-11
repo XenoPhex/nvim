@@ -210,6 +210,11 @@ local plugins = {
 			"nvim-treesitter/nvim-treesitter",
 		},
 	}),
+	["Fildo7525/pretty_hover"] = { -- Displays docs on hotkey
+		"Fildo7525/pretty_hover",
+		event = "LspAttach",
+		opts = {},
+	},
 }
 
 local function load_plugins()

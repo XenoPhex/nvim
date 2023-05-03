@@ -42,7 +42,7 @@ local sources = {
 	null_ls.builtins.diagnostics.golangci_lint.with({
 		args = {
 			"run",
-			"--fix=false",
+			"--fix=true",
 			"--out-format=json",
 			"--path-prefix",
 			"$ROOT",
@@ -74,7 +74,7 @@ null_ls.setup({
 })
 
 mason_null_ls.setup({
-	ensure_installed = nil,
+	ensure_installed = {},
 	automatic_installation = true,
 	automatic_setup = false,
 })

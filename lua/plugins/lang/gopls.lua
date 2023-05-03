@@ -13,6 +13,6 @@ return {
 			unusedparams = true,
 			shadow = true,
 		},
-		staticcheck = true,
+		staticcheck = false,
 	},
 }

@@ -97,7 +97,7 @@ local plugins = {
 		},
 	}),
 	["mrjones2014/legendary.nvim"] = c("mrjones2014/legendary.nvim"),
-	["chrisgrieser/nvim-spider"] = {
+	["chrisgrieser/nvim-spider"] = { -- context aware word traversal for b, w, e keys
 		"chrisgrieser/nvim-spider",
 		lazy = true,
 		config = function()
@@ -140,7 +140,7 @@ local plugins = {
 			"https://gitlab.com/HiPhish/nvim-ts-rainbow2.git", -- Rainbow braces
 		},
 	}),
-	["neovim/nvim-lspconfig"] = c({ -- Contains basic LSP configurations
+	["neovim/nvim-lspconfig"] = c({ -- Contains basic LSP configurations, when this runs it loads plugins.lsp due to c's gsub magic
 		"neovim/nvim-lspconfig",
 		branch = "master",
 		event = "BufReadPre",

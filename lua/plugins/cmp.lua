@@ -31,6 +31,11 @@ if not snip_status_ok then
 	return
 end
 
+local snip_status_ok, tabout = pcall(require, "tabout")
+if not snip_status_ok then
+	return
+end
+
 local lspkind = require("lspkind")
 
 local icons = require("utils.icons")
@@ -97,13 +102,19 @@ cmp.setup({
 		end, { "i", "s", "c" }),
 		["<Tab>"] = cmp.mapping(function(fallback)
 			-- This little snippet will confirm with tab, and if no entry is selected, will confirm the first item
-			if cmp.visible() then
+			if luasnip.expandable() then
+				luasnip.expand()
+			elseif cmp.visible() then
 				local entry = cmp.get_selected_entry()
 				if not entry then
 					cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
 				else
 					cmp.confirm()
 				end
+			elseif luasnip.jumpable(1) then
+				luasnip.jump(1)
+			elseif vim.api.nvim_get_mode().mode == "i" then
+				tabout.tabout()
 			else
 				fallback()
 			end

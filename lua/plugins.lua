@@ -175,6 +175,7 @@ local plugins = {
 			"hrsh7th/cmp-buffer", -- Complete for current words in the buffer
 			"hrsh7th/cmp-path", -- Complete file system paths
 			"hrsh7th/cmp-cmdline", -- Enables cmp in '/' (local find) and ':' (command mode)
+			"abecodes/tabout.nvim", -- Jump out of things with <tab>
 		},
 	}),
 	["ray-x/lsp_signature.nvim"] = c("ray-x/lsp_signature.nvim"), -- Connect tab completion with LSP

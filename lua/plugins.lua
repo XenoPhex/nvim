@@ -101,7 +101,9 @@ local plugins = {
 		"chrisgrieser/nvim-spider",
 		lazy = true,
 		config = function()
-			require("spider").setup({})
+			require("spider").setup({
+				skipInsignificantPunctuation = false,
+			})
 		end,
 	},
 	---- Language Setup

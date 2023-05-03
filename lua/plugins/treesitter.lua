@@ -41,6 +41,8 @@ require("nvim-treesitter.configs").setup({
 		"java",
 		"json",
 		"lua",
+		"luadoc",
+		"luap",
 		"make",
 		"markdown",
 		"markdown_inline",

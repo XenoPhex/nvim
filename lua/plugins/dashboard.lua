@@ -11,7 +11,7 @@ dashboard.setup({
 		},
 		shortcut = {
 			{
-				icon = " ",
+				icon = "󰊳 ",
 				desc = "Update Plugins",
 				group = "@property",
 				action = "Lazy update",
@@ -25,14 +25,14 @@ dashboard.setup({
 				key = "m",
 			},
 			{
-				icon = " ",
+				icon = "󰈔 ",
 				desc = "Files",
 				group = "Label",
 				action = "FzfLua files",
 				key = "p",
 			},
 			{
-				icon = " ",
+				icon = "󰈞 ",
 				desc = "Search",
 				group = "Files",
 				action = "FzfLua live_grep",

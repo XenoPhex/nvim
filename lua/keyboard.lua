@@ -102,7 +102,11 @@ return {
 		":NeoTreeClose<cr>",
 		description = "Close file browser",
 	},
-	{ "gF", description = "Go to file under cursor (includes ':line number:character number')" },
+	{
+		-- hotkeys set by wsdjeg/vim-fetch
+		"gF",
+		description = "Go to file under cursor (includes ':line number:character number')",
+	},
 
 	-- Spider config
 	{

@@ -28,6 +28,12 @@ M.on_attach = function(client, buffer)
 	if not status_ok then
 		return
 	end
+
+	navic.setup({
+		icons = require("utils.icons").ui_with_space,
+		highlight = true,
+	})
+
 	if client.server_capabilities.documentSymbolProvider then
 		navic.attach(client, buffer)
 

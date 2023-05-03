@@ -21,11 +21,12 @@
 -- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 -- SOFTWARE.
 
+local icons = require("utils.icons")
 local signs = {
-	{ name = "DiagnosticSignError", text = "" },
-	{ name = "DiagnosticSignWarn", text = "" },
-	{ name = "DiagnosticSignHint", text = "" },
-	{ name = "DiagnosticSignInfo", text = "" },
+	{ name = "DiagnosticSignError", text = icons.diagnostics.BoldError },
+	{ name = "DiagnosticSignWarn", text = icons.diagnostics.BoldWarning },
+	{ name = "DiagnosticSignHint", text = icons.diagnostics.BoldHint },
+	{ name = "DiagnosticSignInfo", text = icons.diagnostics.BoldInformation },
 }
 for _, sign in ipairs(signs) do
 	if not sign.texthl then

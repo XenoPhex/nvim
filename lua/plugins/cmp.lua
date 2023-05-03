@@ -33,6 +33,8 @@ end
 
 local lspkind = require("lspkind")
 
+local icons = require("utils.icons")
+
 cmp.setup({
 	completion = {
 		completeopt = "menu,menuone,noinsert,noselect", -- Always show menu, don't insert anything by default
@@ -45,13 +47,12 @@ cmp.setup({
 			local kind = lspkind.cmp_format({
 				mode = "symbol_text",
 				maxwidth = 50,
-				ellipsis_char = "", -- when pop up menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
-				symbol_map = { Suggestion = "" },
+				ellipsis_char = icons.ui.Ellipsis, -- when pop up menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
+				symbol_map = icons.ui,
 			})(entry, vim_item)
 			local strings = vim.split(kind.kind, "%s", { trimempty = true })
 			kind.kind = " " .. (strings[1] or "") .. " "
 			kind.menu = " " .. (entry:get_completion_item().detail or "")
-
 			return kind
 		end,
 	},

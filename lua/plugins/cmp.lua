@@ -36,6 +36,8 @@ if not snip_status_ok then
 	return
 end
 
+tabout.setup({})
+
 local lspkind = require("lspkind")
 
 local icons = require("utils.icons")

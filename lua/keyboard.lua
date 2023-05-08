@@ -214,4 +214,26 @@ return {
 		":lua vim.lsp.buf.format({ async = true })<cr>",
 		description = "Auto-indent lines",
 	},
+	-- Go Alt Files
+	{
+		"gaa",
+		function()
+			require("utils.alternate").switch(false, "")
+		end,
+		description = "GoLang Alt file",
+	},
+	{
+		"gas",
+		function()
+			require("utils.alternate").switch(false, "split")
+		end,
+		description = "GoLang Alt file in splint",
+	},
+	{
+		"gav",
+		function()
+			require("utils.alternate").switch(false, "vsplit")
+		end,
+		description = "GoLang Alt file in vsplit",
+	},
 }

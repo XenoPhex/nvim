@@ -17,9 +17,10 @@ fzf.setup({
 	files = {
 		fd_opts = fzf_defaults.files.fd_opts
 			.. " --no-ignore-vcs" -- Include git ignored files
-			.. " -E .cache" -- Exclude .cache
-			.. " -E *.pyc" -- Exclude (python) cache files
 			.. " -E *.class" -- Exclude Java class files
+			.. " -E *.pyc" -- Exclude (python) cache files
+			.. " -E *.spl" -- Exclude binary spell files
+			.. " -E .cache" -- Exclude .cache
 			.. " -E .git" -- Exclude .git
 			.. " -E .gradle" -- Exclude .gradle
 			.. " -E .venv", -- Exclude python virtual envs

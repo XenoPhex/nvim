@@ -269,4 +269,9 @@ return {
 		end,
 		description = "GoLang Alt file in vsplit",
 	},
+	{
+		"z=",
+		":FzfLua spell_suggest<cr>",
+		description = "Auto-indent lines",
+	},
 }

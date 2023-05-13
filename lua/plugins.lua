@@ -30,7 +30,6 @@ end
 local plugins = {
 	---- General Utilities
 	["nvim-lua/plenary.nvim"] = p(100, "nvim-lua/plenary.nvim"), -- Common Lua functions
-	["folke/which-key.nvim"] = c("folke/which-key.nvim"),
 	["tanvirtin/vgit.nvim"] = c({
 		"tanvirtin/vgit.nvim",
 		event = "BufReadPre",
@@ -98,8 +97,9 @@ local plugins = {
 	}),
 	["mrjones2014/legendary.nvim"] = c({
 		"mrjones2014/legendary.nvim",
-		dependencies = {
-			"ibhagwan/fzf-lua", -- not a real dependency, need to have FZF setup before legendary
+		dependencies = { -- not a real dependencies, just need to have FZF setup before legendary
+			"chrisgrieser/nvim-spider",
+			"ibhagwan/fzf-lua",
 		},
 	}),
 	["chrisgrieser/nvim-spider"] = { -- context aware word traversal for b, w, e keys

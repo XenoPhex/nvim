@@ -66,7 +66,7 @@ return {
 	},
 	{
 		"<C-S-f>",
-		":FzfLua live_grep<CR>",
+		":FzfLua live_grep_resume<CR>",
 		description = "Search in all files",
 	},
 	{

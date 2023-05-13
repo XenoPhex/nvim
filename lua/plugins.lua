@@ -96,7 +96,12 @@ local plugins = {
 			"nvim-treesitter/nvim-treesitter",
 		},
 	}),
-	["mrjones2014/legendary.nvim"] = c("mrjones2014/legendary.nvim"),
+	["mrjones2014/legendary.nvim"] = c({
+		"mrjones2014/legendary.nvim",
+		dependencies = {
+			"ibhagwan/fzf-lua", -- not a real dependency, need to have FZF setup before legendary
+		},
+	}),
 	["chrisgrieser/nvim-spider"] = { -- context aware word traversal for b, w, e keys
 		"chrisgrieser/nvim-spider",
 		lazy = true,

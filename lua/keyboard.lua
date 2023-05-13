@@ -14,6 +14,20 @@ vim.keymap.set({ "i", "c" }, "<C-h>", "<BS>")
 vim.keymap.set({ "i", "c" }, "<C-a>", "<Home>")
 vim.keymap.set({ "i", "c" }, "<C-e>", "<End>")
 
+local fzf_defaults = require("fzf-lua.defaults").defaults
+
+local fd_opts = table.concat({
+	fzf_defaults.files.fd_opts,
+	".mypy_cache*", -- Exclude mypy cache
+	"*.class", -- Exclude Java class files
+	"*.pyc", -- Exclude (python) cache files
+	"*.spl", -- Exclude binary spell files
+	".cache", -- Exclude .cache
+	".git", -- Exclude .git
+	".gradle", -- Exclude .gradle
+	".venv", -- Exclude python virtual envs
+}, " -E ") .. " --no-ignore-vcs" -- Include git ignored files
+
 return {
 	-- Find
 	{
@@ -23,8 +37,27 @@ return {
 	},
 	{
 		"<C-p>",
-		":FzfLua files<CR>",
+		function()
+			require("fzf-lua").files({
+				fd_opts = table.concat({
+					fd_opts,
+				}, " -E "),
+			})
+		end,
 		description = "Fuzzy Find / Search for file",
+	},
+	{
+		"<C-S-p>",
+		function()
+			require("fzf-lua").files({
+				fd_opts = table.concat({
+					fd_opts,
+					"*test*",
+					"*fakes*",
+				}, " -E "),
+			})
+		end,
+		description = "Fuzzy Find / Search for file (ignore tests/fake)",
 	},
 	{
 		"<C-f>",

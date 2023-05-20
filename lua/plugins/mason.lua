@@ -34,7 +34,7 @@ mason_lsp.setup({
 
 require("plugins.lang")
 
-markdownlint_config = {
+local markdownlint_config = {
 	extra_args = {
 		"-c",
 		CONFIG_PATH .. "/lua/plugins/lsp_server/markdownlint.json",

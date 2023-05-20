@@ -140,41 +140,6 @@ return {
 		"gF",
 		description = "Go to file under cursor (includes ':line number:character number')",
 	},
-
-	-- Spider config
-	{
-		"w",
-		function()
-			require("spider").motion("w")
-		end,
-		"Spider-w",
-		{ "n", "o", "x" },
-	},
-	{
-		"e",
-		function()
-			require("spider").motion("e")
-		end,
-		"Spider-e",
-		{ "n", "o", "x" },
-	},
-	{
-		"b",
-		function()
-			require("spider").motion("b")
-		end,
-		"Spider-b",
-		{ "n", "o", "x" },
-	},
-	{
-		"ge",
-		function()
-			require("spider").motion("ge")
-		end,
-		"Spider-ge",
-		{ "n", "o", "x" },
-	},
-
 	-- Folding
 	{
 		"zR",

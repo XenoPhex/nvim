@@ -98,18 +98,11 @@ local plugins = {
 	["mrjones2014/legendary.nvim"] = c({
 		"mrjones2014/legendary.nvim",
 		dependencies = { -- not a real dependencies, just need to have FZF setup before legendary
-			"chrisgrieser/nvim-spider",
 			"ibhagwan/fzf-lua",
 		},
 	}),
-	["chrisgrieser/nvim-spider"] = { -- context aware word traversal for b, w, e keys
-		"chrisgrieser/nvim-spider",
-		lazy = true,
-		config = function()
-			require("spider").setup({
-				skipInsignificantPunctuation = false,
-			})
-		end,
+	["chaoren/vim-wordmotion"] = { -- context aware word traversal for b, w, e keys
+		"chaoren/vim-wordmotion",
 	},
 	---- Language Setup
 	--> 1. Setup Snippets

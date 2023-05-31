@@ -18,14 +18,16 @@ local fzf_defaults = require("fzf-lua.defaults").defaults
 
 local fd_opts = table.concat({
 	fzf_defaults.files.fd_opts,
-	".mypy_cache*", -- Exclude mypy cache
 	"*.class", -- Exclude Java class files
 	"*.pyc", -- Exclude (python) cache files
 	"*.spl", -- Exclude binary spell files
 	".cache", -- Exclude .cache
 	".git", -- Exclude .git
 	".gradle", -- Exclude .gradle
+	".mypy_cache*", -- Exclude mypy cache
 	".venv", -- Exclude python virtual envs
+	".cicd", -- Exclude cicd directory
+	"node_modules", -- Exclude node_modules
 }, " -E ") .. " --no-ignore-vcs" -- Include git ignored files
 
 return {
@@ -54,10 +56,11 @@ return {
 					fd_opts,
 					"*test*",
 					"*fakes*",
+					"vendor",
 				}, " -E "),
 			})
 		end,
-		description = "Fuzzy Find / Search for file (ignore tests/fake)",
+		description = "Fuzzy Find / Search for file (ignore tests/fake/vendor)",
 	},
 	{
 		"<C-f>",

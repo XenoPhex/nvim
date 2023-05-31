@@ -51,8 +51,6 @@ local sources = {
 			"run",
 			"--fix=true",
 			"--out-format=json",
-			"--path-prefix",
-			"$ROOT",
 			"-Eerrorlint",
 			"-Egodot",
 			"-Egoimports",

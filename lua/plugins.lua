@@ -72,9 +72,6 @@ local plugins = {
 		})
 	),
 	["rcarriga/nvim-notify"] = p(100, c("rcarriga/nvim-notify")), -- Pop-up notifications
-	["nvim-telescope/telescope.nvim"] = c({ -- Fuzzy finder for files, buffer, etc.
-		"nvim-telescope/telescope.nvim",
-	}),
 	["nvim-tree/nvim-web-devicons"] = c("nvim-tree/nvim-web-devicons"), -- More icons!
 	["utilyre/barbecue.nvim"] = c({ -- Location bar
 		"utilyre/barbecue.nvim",

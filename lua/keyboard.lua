@@ -113,7 +113,7 @@ return {
 	},
 	{
 		"<leader>n",
-		":Telescope notify<cr>",
+		":Notifications<cr>",
 		description = "Display notifications",
 	},
 	{

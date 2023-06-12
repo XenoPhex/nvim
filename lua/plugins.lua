@@ -56,6 +56,13 @@ local plugins = {
 		event = "BufReadPre",
 	},
 	["wsdjeg/vim-fetch"] = "wsdjeg/vim-fetch", -- Adds line number (ie file/path:num) parsing to various commands
+	["johmsalas/text-case.nvim"] = { -- smart case substitutions via 'Sub' command
+		"johmsalas/text-case.nvim",
+		event = "BufReadPre",
+		config = function()
+			require("textcase").setup({})
+		end,
+	},
 	---- UI
 	["catppuccin/nvim"] = p( -- Color Scheme
 		1000,

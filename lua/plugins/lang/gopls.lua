@@ -1,5 +1,12 @@
 return {
 	settings = {
+		analyses = {
+			nilness = true,
+			shadow = true,
+			unusedparams = true,
+			useany = true,
+		},
+		experimentalPostfixCompletions = true,
 		hints = {
 			assignVariableTypes = true,
 			compositeLiteralFields = true,
@@ -7,11 +14,6 @@ return {
 			functionTypeParameters = true,
 			parameterNames = true,
 			rangeVariableTypes = true,
-		},
-		experimentalPostfixCompletions = true,
-		analyses = {
-			unusedparams = true,
-			shadow = true,
 		},
 		staticcheck = false,
 	},

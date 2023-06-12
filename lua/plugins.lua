@@ -185,6 +185,14 @@ local plugins = {
 	}),
 	["ray-x/lsp_signature.nvim"] = c("ray-x/lsp_signature.nvim"), -- Connect tab completion with LSP
 	--> 4. Language Tooling
+	["jmbuhr/otter.nvim"] = c({ -- Allows for LSP in ``` blocks
+		"jmbuhr/otter.nvim",
+		dependencies = {
+			"hrsh7th/nvim-cmp",
+			"neovim/nvim-lspconfig",
+			"nvim-treesitter/nvim-treesitter",
+		},
+	}),
 	["j-hui/fidget.nvim"] = c({
 		"j-hui/fidget.nvim",
 		branch = "legacy",

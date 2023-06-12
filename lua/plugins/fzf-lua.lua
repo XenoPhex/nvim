@@ -7,9 +7,10 @@ end
 fzf.setup({
 	winopts = {
 		preview = {
+			default = "bat_native",
+			layout = "vertical",
 			vertical = "up:65%",
 			wrap = "wrap",
-			layout = "vertical",
 		},
 	},
 	lsp = {
@@ -18,6 +19,7 @@ fzf.setup({
 		symbols = {
 			symbol_icons = require("utils.icons").ui,
 		},
+		sync = true,
 	},
 })
 

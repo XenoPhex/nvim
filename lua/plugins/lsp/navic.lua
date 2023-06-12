@@ -36,14 +36,6 @@ M.on_attach = function(client, buffer)
 
 	if client.server_capabilities.documentSymbolProvider then
 		navic.attach(client, buffer)
-
-		vim.api.nvim_create_autocmd("BufEnter", {
-			callback = function()
-				if vim.api.nvim_buf_line_count(0) > 500 then
-					vim.b.navic_lazy_update_context = true
-				end
-			end,
-		})
 	end
 end
 

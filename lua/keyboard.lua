@@ -18,6 +18,7 @@ local fzf_defaults = require("fzf-lua.defaults").defaults
 
 local fd_opts = table.concat({
 	fzf_defaults.files.fd_opts,
+	".DS_Store", -- Exclude DS_Store
 	"*.class", -- Exclude Java class files
 	"*.pyc", -- Exclude (python) cache files
 	"*.spl", -- Exclude binary spell files

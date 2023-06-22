@@ -13,6 +13,7 @@ vim.g["neo_tree_remove_legacy_commands"] = 1
 picker.setup({
 	autoselect_one = true,
 	include_current = false,
+	hint = "floating-big-letter",
 	filter_rules = {
 		-- filter using buffer options
 		bo = {

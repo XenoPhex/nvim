@@ -49,7 +49,6 @@ local sources = {
 	null_ls.builtins.diagnostics.golangci_lint.with({
 		args = {
 			"run",
-			"--fix=true",
 			"--out-format=json",
 			"-Eerrorlint",
 			"-Egodot",

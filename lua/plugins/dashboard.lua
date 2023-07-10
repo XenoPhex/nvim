@@ -6,8 +6,16 @@ end
 dashboard.setup({
 	theme = "hyper",
 	config = {
+		footer = {
+			"",
+			" 🚀 Sharp tools make work better.",
+		},
+		project = {
+			enable = false,
+		},
 		week_header = {
 			enable = true,
+			append = { "beep boop" },
 		},
 		shortcut = {
 			{

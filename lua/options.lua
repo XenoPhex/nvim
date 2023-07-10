@@ -40,7 +40,7 @@ local options = {
 	inccommand = "nosplit", -- Preview commands like substitute
 	ignorecase = true, -- Case insensitive search
 	smartcase = true, -- ... but case sensitive when uc present
-	smartindent = true, -- ... but case sensitive when uc present
+	smartindent = false, -- ... but case sensitive when uc present
 	sessionoptions = {
 		"blank",
 		"buffers",

@@ -70,7 +70,6 @@ require("nvim-treesitter.configs").setup({
 	},
 	indent = {
 		enable = true,
-		disable = { "yaml", "python" },
 	},
 	context_commentstring = {
 		enable = true,

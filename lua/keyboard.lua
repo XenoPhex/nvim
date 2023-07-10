@@ -18,16 +18,18 @@ local fzf_defaults = require("fzf-lua.defaults").defaults
 
 local fd_opts = table.concat({
 	fzf_defaults.files.fd_opts,
-	".DS_Store", -- Exclude DS_Store
 	"*.class", -- Exclude Java class files
+	"*.log", -- Exclude log files
 	"*.pyc", -- Exclude (python) cache files
 	"*.spl", -- Exclude binary spell files
 	".cache", -- Exclude .cache
+	".cicd", -- Exclude cicd directory
+	".DS_Store", -- Exclude DS_Store
 	".git", -- Exclude .git
 	".gradle", -- Exclude .gradle
+	".idea", -- Exclude the '.idea' intellij directory
 	".mypy_cache*", -- Exclude mypy cache
 	".venv", -- Exclude python virtual envs
-	".cicd", -- Exclude cicd directory
 	"node_modules", -- Exclude node_modules
 }, " -E ") .. " --no-ignore-vcs" -- Include git ignored files
 

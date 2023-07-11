@@ -30,6 +30,7 @@ local fd_opts = table.concat({
 	".idea", -- Exclude the '.idea' intellij directory
 	".mypy_cache*", -- Exclude mypy cache
 	".venv", -- Exclude python virtual envs
+	"fake_*.go", -- Exclude fakes
 	"node_modules", -- Exclude node_modules
 }, " -E ") .. " --no-ignore-vcs" -- Include git ignored files
 

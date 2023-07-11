@@ -135,7 +135,6 @@ local plugins = {
 			"RRethy/nvim-treesitter-textsubjects", -- Adds block aware visual selection expansion
 			"nvim-treesitter/nvim-treesitter-textobjects", -- Adds additional language parsing mechanisms
 			"m-demare/hlargs.nvim", -- Highlight arguments' definitions and usages
-			"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 			"b0o/schemastore.nvim", -- contains various schema configs
 			"https://gitlab.com/HiPhish/nvim-ts-rainbow2.git", -- Rainbow braces
 		},
@@ -214,10 +213,6 @@ local plugins = {
 		},
 	}),
 	["folke/trouble.nvim"] = c("folke/trouble.nvim"), -- Error/Warning terminal
-	["git.sr.ht/~whynothugo/lsp_lines.nvim"] = c({
-		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-		branch = "main",
-	}), -- lsp line display
 	["simrat39/symbols-outline.nvim"] = c({ -- A tree like view for symbols in a given file
 		"simrat39/symbols-outline.nvim",
 		dependencies = {
@@ -229,6 +224,10 @@ local plugins = {
 		event = "LspAttach",
 		opts = {},
 	},
+	["dgagn/diagflow.nvim"] = c({ -- Displays virtual text in the corner
+		"dgagn/diagflow.nvim",
+		event = "LspAttach",
+	}),
 }
 
 local function load_plugins()

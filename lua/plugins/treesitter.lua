@@ -21,6 +21,23 @@
 -- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 -- SOFTWARE.
 
+local status_ok, rainbow_delimiters = pcall(require, "rainbow-delimiters")
+if not status_ok then
+	vim.notify("rainbow_delimiters could not load", vim.log.levels.WARN)
+else
+	vim.g.rainbow_delimiters = {
+		strategy = {
+			[""] = rainbow_delimiters.strategy["global"],
+			commonlisp = rainbow_delimiters.strategy["local"],
+		},
+		query = {
+			[""] = "rainbow-delimiters",
+			latex = "rainbow-blocks",
+		},
+		blacklist = { "c", "cpp" },
+	}
+end
+
 require("nvim-treesitter.configs").setup({
 	auto_install = true,
 	sync_install = false,
@@ -73,15 +90,6 @@ require("nvim-treesitter.configs").setup({
 	},
 	context_commentstring = {
 		enable = true,
-	},
-	rainbow = {
-		enable = true,
-		extended_mode = false,
-		disable = { "html" },
-		-- Which query to use for finding delimiters
-		query = "rainbow-parens",
-		-- Highlight the entire buffer all at once
-		strategy = require("ts-rainbow.strategy.global"),
 	},
 	textobjects = {
 		select = {

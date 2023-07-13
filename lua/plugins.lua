@@ -136,7 +136,7 @@ local plugins = {
 			"nvim-treesitter/nvim-treesitter-textobjects", -- Adds additional language parsing mechanisms
 			"m-demare/hlargs.nvim", -- Highlight arguments' definitions and usages
 			"b0o/schemastore.nvim", -- contains various schema configs
-			"https://gitlab.com/HiPhish/nvim-ts-rainbow2.git", -- Rainbow braces
+			"https://gitlab.com/HiPhish/rainbow-delimiters.nvim", -- Rainbow braces
 		},
 	}),
 	["neovim/nvim-lspconfig"] = c({ -- Contains basic LSP configurations, when this runs it loads plugins.lsp due to c's gsub magic

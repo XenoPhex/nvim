@@ -25,7 +25,7 @@ catppuccin.setup({
 		telescope = true,
 		treesitter = true,
 		treesitter_context = true,
-		ts_rainbow2 = true,
+		rainbow_delimiters = true,
 		which_key = true,
 	},
 })

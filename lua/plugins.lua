@@ -130,12 +130,10 @@ local plugins = {
 		end,
 		lazy = false,
 		dependencies = {
-			"nvim-treesitter/playground", -- Library used to interact / debug treesitter
 			"RRethy/nvim-treesitter-endwise", -- Adds "end"/closes blocks
 			"RRethy/nvim-treesitter-textsubjects", -- Adds block aware visual selection expansion
 			"nvim-treesitter/nvim-treesitter-textobjects", -- Adds additional language parsing mechanisms
 			"m-demare/hlargs.nvim", -- Highlight arguments' definitions and usages
-			"b0o/schemastore.nvim", -- contains various schema configs
 			"https://gitlab.com/HiPhish/rainbow-delimiters.nvim", -- Rainbow braces
 		},
 	}),
@@ -144,7 +142,10 @@ local plugins = {
 		branch = "master",
 		event = "BufReadPre",
 		dependencies = {
-			{ "folke/neodev.nvim", config = true }, -- full signature help, docs and completion for the nvim lua API, needs to be setup before lspconfig
+			{
+				"folke/neodev.nvim",
+				config = true,
+			}, -- full signature help, docs and completion for the nvim lua API, needs to be setup before lspconfig
 		},
 	}),
 	["jose-elias-alvarez/null-ls.nvim"] = { -- Allows non-LSP Language tools to integrate as LSP tools
@@ -160,6 +161,7 @@ local plugins = {
 			"neovim/nvim-lspconfig",
 			"williamboman/mason-lspconfig.nvim", -- Bridges gap between mason and lspconfig; provides automatic installs/updates
 			"jose-elias-alvarez/null-ls.nvim",
+			"b0o/schemastore.nvim", -- contains various schema configs
 		},
 	}),
 	--> 3. Tab / Text Completion

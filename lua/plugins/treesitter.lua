@@ -38,10 +38,16 @@ else
 	}
 end
 
-require("nvim-treesitter.configs").setup({
+local status_ok, treesitter_config = pcall(require, "nvim-treesitter.configs")
+if not status_ok then
+	vim.notify("treesitter could not load", vim.log.levels.WARN)
+	return
+end
+
+treesitter_config.setup({
 	auto_install = true,
 	sync_install = false,
-	ensure_installed = tbl.merge({
+	ensure_installed = tbl.merge_lists({
 		"bash",
 		"c",
 		"cmake",
@@ -71,25 +77,24 @@ require("nvim-treesitter.configs").setup({
 		"yaml",
 	}, override_settings.lang),
 	ignore_install = { "phpdoc", "tree-sitter-phpdoc" }, -- List of parsers to ignore installing
-	autopairs = { enable = true },
-	incremental_selection = {
-		enable = true,
-		keymaps = {
-			init_selection = "gnn",
-			node_incremental = "grn",
-			scope_incremental = "grc",
-			node_decremental = "grm",
-		},
-	},
+
+	-- Following are built-in modules
 	highlight = {
 		enable = true,
-		additional_vim_regex_highlighting = false,
+	},
+	incremental_selection = {
+		enable = true,
 	},
 	indent = {
 		enable = true,
 	},
-	context_commentstring = {
+
+	-- Following are module extensions
+	autopairs = {
 		enable = true,
+	},
+	endwise = {
+		enabled = true,
 	},
 	textobjects = {
 		select = {
@@ -138,25 +143,6 @@ require("nvim-treesitter.configs").setup({
 			["i;"] = "textsubjects-container-inner",
 		},
 	},
-	playground = {
-		enable = true,
-		disable = {},
-		updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-		persist_queries = false, -- Whether the query persists across vim sessions
-		keybindings = {
-			toggle_query_editor = "o",
-			toggle_hl_groups = "i",
-			toggle_injected_languages = "t",
-			toggle_anonymous_nodes = "a",
-			toggle_language_display = "I",
-			focus_language = "f",
-			unfocus_language = "F",
-			update = "R",
-			goto_node = "<cr>",
-			show_help = "?",
-		},
-	},
-	endwise = { enabled = true },
 })
 
 require("hlargs").setup()

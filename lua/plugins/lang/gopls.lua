@@ -5,6 +5,8 @@ return {
 				nilness = true,
 				shadow = true,
 				unusedparams = true,
+				unusedvariable = true,
+				unusedwrite = true,
 				useany = true,
 			},
 			experimentalPostfixCompletions = true,

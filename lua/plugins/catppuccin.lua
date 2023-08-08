@@ -12,6 +12,7 @@ catppuccin.setup({
 		-- For integrations see: https://github.com/catppuccin/nvim#integrations
 		barbecue = {
 			dim_dirname = true,
+			alt_background = true,
 		},
 		navic = {
 			enabled = true,
@@ -22,6 +23,7 @@ catppuccin.setup({
 		lsp_trouble = true,
 		mason = true,
 		notify = true,
+		neotree = true,
 		telescope = true,
 		treesitter = true,
 		treesitter_context = true,

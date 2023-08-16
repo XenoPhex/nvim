@@ -134,7 +134,7 @@ return {
 	-- Navigation
 	{
 		"<leader>e",
-		":Neotree reveal source=filesystem reveal=true<cr>",
+		":Neotree reveal reveal=true<cr>",
 		description = "Show file in tree",
 	},
 	{

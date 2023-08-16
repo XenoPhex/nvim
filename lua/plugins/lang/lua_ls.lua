@@ -3,16 +3,18 @@ return {
 		Lua = {
 			completion = {
 				callSnippet = "Replace",
+				displayContext = 1,
 			},
 			format = {
 				defaultConfig = {
 					indent_style = "tab",
+					indent_size = "4",
 				},
 			},
 			hint = {
 				enable = true,
-				arrayIndex = "Disabled",
-				paramName = "Disabled",
+				arrayIndex = "Disable",
+				paramName = "Disable",
 				paramType = false,
 				semicolon = "SameLine",
 				setType = true,
@@ -26,7 +28,8 @@ return {
 			diagnostics = {
 				globals = { "vim", "global_settings", "override_settings", "os" },
 				neededFileStatus = {
-					["codestyle-check"] = "Opened",
+					["codestyle"] = "Opened",
+					["unused"] = "Opened",
 				},
 			},
 			telemetry = {

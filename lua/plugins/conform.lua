@@ -14,7 +14,7 @@ conform.setup({
 	format_on_save = {
 		lsp_fallback = true,
 		quiet = true,
-		timeout_ms = 500,
+		timeout_ms = 5000,
 	},
 	notify_on_error = true,
 })

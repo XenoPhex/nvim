@@ -23,6 +23,7 @@
 
 local augroup = vim.api.nvim_create_augroup("GeneralAutoCmds", { clear = true })
 
+-- Auto resize buffers on window resize.
 vim.api.nvim_create_autocmd({ "VimResized" }, {
 	group = augroup,
 	callback = function()
@@ -30,6 +31,7 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 	end,
 })
 
+-- Set 'q' hot key to close various window pop ups.
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	group = augroup,
 	pattern = { "qf", "help", "man", "lspinfo" },
@@ -41,6 +43,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	end,
 })
 
+-- Automatically enable spelling and wrap for git commits and markdown files.
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	group = augroup,
 	pattern = { "gitcommit", "markdown" },
@@ -50,6 +53,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	end,
 })
 
+-- Modify formatting options.
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 	group = augroup,
 	pattern = { "*" },
@@ -58,10 +62,20 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 	end,
 })
 
+-- Automatically generate spell file when writing to vim dictionary.
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 	group = augroup,
 	pattern = { "*.add" },
 	callback = function()
 		vim.cmd("mkspell! %")
+	end,
+})
+
+-- Set Brewfile to be Ruby
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+	group = augroup,
+	pattern = { "Brewfile" },
+	callback = function()
+		vim.o.ft = "ruby"
 	end,
 })

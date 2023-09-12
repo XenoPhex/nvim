@@ -69,12 +69,12 @@ return {
 	{
 		"<C-f>",
 		":FzfLua  lgrep_curbuf<CR>",
-		description = "Search in all files",
+		description = "Search/find in current buffer",
 	},
 	{
 		"<C-S-f>",
 		":FzfLua live_grep_resume<CR>",
-		description = "Search in all files",
+		description = "Search/find in all files",
 	},
 	{
 		"<leader>h",

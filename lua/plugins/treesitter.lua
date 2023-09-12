@@ -75,7 +75,7 @@ treesitter_config.setup({
 		"vim",
 		"vimdoc",
 		"yaml",
-	}, override_settings.lang),
+	}, override_settings.treesitter_lang),
 	ignore_install = { "phpdoc", "tree-sitter-phpdoc" }, -- List of parsers to ignore installing
 
 	-- Following are built-in modules

@@ -152,21 +152,22 @@ local plugins = {
 			}, -- full signature help, docs and completion for the nvim lua API, needs to be setup before lspconfig
 		},
 	}),
-	["jose-elias-alvarez/null-ls.nvim"] = { -- Allows non-LSP Language tools to integrate as LSP tools
-		"jose-elias-alvarez/null-ls.nvim",
-		event = "BufReadPre",
-		dependencies = {
-			"jay-babu/mason-null-ls.nvim", -- Bridges gap between mason and null_ls; provides automatic installs/updates
-		},
-	},
 	["williamboman/mason.nvim"] = c({ -- Installs and Manages LSP Servers
 		"williamboman/mason.nvim",
 		dependencies = {
 			"neovim/nvim-lspconfig",
 			"williamboman/mason-lspconfig.nvim", -- Bridges gap between mason and lspconfig; provides automatic installs/updates
-			"jose-elias-alvarez/null-ls.nvim",
 			"b0o/schemastore.nvim", -- contains various schema configs
 		},
+	}),
+	["mfussenegger/nvim-lint"] = c({ -- Additional linters
+		event = "BufReadPre",
+		"mfussenegger/nvim-lint",
+	}),
+	["stevearc/conform.nvim"] = c({ -- Formatters
+		event = "BufReadPre",
+		"stevearc/conform.nvim",
+		opts = {},
 	}),
 	--> 3. Tab / Text Completion
 	["hrsh7th/nvim-cmp"] = c({ -- Tab completion

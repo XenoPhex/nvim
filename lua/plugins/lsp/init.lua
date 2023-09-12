@@ -53,6 +53,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		require("plugins.lsp.navic").on_attach(client, buffer)
 		require("plugins.lsp.format").on_attach(client, buffer)
 
+		-- Enable Inlay Hints if server provides it
 		if client.server_capabilities.inlayHintProvider then
 			vim.lsp.inlay_hint(buffer, true)
 		end

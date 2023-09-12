@@ -27,7 +27,7 @@ local function load_languages()
 		yamlls = require("plugins.lang.yamlls"),
 	}
 
-	local all_lang = tbl.merge(langs, override_settings.lsp)
+	local all_lang = tbl.merge(langs, override_settings.lang)
 	for lang, config in pairs(all_lang) do
 		config.capabilities = extended_capabilities()
 		lspconfig[lang].setup(config)

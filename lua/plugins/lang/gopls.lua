@@ -10,6 +10,7 @@ return {
 				useany = true,
 			},
 			experimentalPostfixCompletions = true,
+			gofumpt = true,
 			hints = {
 				assignVariableTypes = true,
 				compositeLiteralFields = true,

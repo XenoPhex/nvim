@@ -6,6 +6,7 @@ return {
 				displayContext = 1,
 			},
 			format = {
+				enable = false,
 				defaultConfig = {
 					indent_style = "tab",
 					indent_size = "4",
@@ -26,9 +27,9 @@ return {
 				},
 			},
 			diagnostics = {
-				globals = { "vim", "global_settings", "override_settings", "os" },
+				globals = { "vim", "global_settings", "override_settings", "os", "tbl" },
 				neededFileStatus = {
-					["codestyle"] = "Opened",
+					["codestyle-check"] = "Opened",
 					["unused"] = "Opened",
 				},
 			},

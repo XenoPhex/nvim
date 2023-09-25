@@ -184,7 +184,10 @@ local plugins = {
 			"abecodes/tabout.nvim", -- Jump out of things with <tab>
 		},
 	}),
-	["ray-x/lsp_signature.nvim"] = c("ray-x/lsp_signature.nvim"), -- Connect tab completion with LSP
+	["ray-x/lsp_signature.nvim"] = c({
+		"ray-x/lsp_signature.nvim",
+		branch = "master",
+	}), -- Connect tab completion with LSP
 	--> 4. Language Tooling
 	["jmbuhr/otter.nvim"] = c({ -- Allows for LSP in ``` blocks
 		"jmbuhr/otter.nvim",

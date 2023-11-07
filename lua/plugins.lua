@@ -116,10 +116,9 @@ local plugins = {
 		"L3MON4D3/LuaSnip",
 		event = "InsertEnter",
 		build = "make install_jsregexp",
-	},
-	["rafamadriz/friendly-snippets"] = { -- More snippets
-		"rafamadriz/friendly-snippets",
-		event = "InsertEnter",
+		dependencies = {
+			"rafamadriz/friendly-snippets", -- More snippets
+		},
 		config = function()
 			require("luasnip.loaders.from_vscode").lazy_load()
 			require("luasnip.loaders.from_snipmate").lazy_load()

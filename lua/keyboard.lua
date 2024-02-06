@@ -24,6 +24,7 @@ local fd_opts = table.concat({
 	"*.spl", -- Exclude binary spell files
 	".cache", -- Exclude .cache
 	".cicd", -- Exclude cicd directory
+	".distdir", -- Exclude .distdir directory
 	".DS_Store", -- Exclude DS_Store
 	".git", -- Exclude .git
 	".gradle", -- Exclude .gradle

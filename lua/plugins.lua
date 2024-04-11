@@ -278,6 +278,9 @@ local function load_plugins()
 			enabled = true,
 			frequency = 3600 * 12, -- check every 12 hours
 		},
+		ui = {
+			border = "rounded",
+		},
 	})
 end
 

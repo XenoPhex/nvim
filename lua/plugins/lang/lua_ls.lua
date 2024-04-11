@@ -27,7 +27,7 @@ return {
 				},
 			},
 			diagnostics = {
-				globals = { "vim", "global_settings", "override_settings", "os", "tbl" },
+				globals = { "reture", "vim", "global_settings", "override_settings", "os", "tbl" },
 				neededFileStatus = {
 					["codestyle-check"] = "Opened",
 					["unused"] = "Opened",

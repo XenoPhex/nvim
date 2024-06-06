@@ -140,7 +140,7 @@ return {
 		description = "Show file in tree",
 	},
 	{
-		"<leader><c>",
+		"<leader>c",
 		":Neotree close<cr>",
 		description = "Close file browser",
 	},

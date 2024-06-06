@@ -193,12 +193,12 @@ return {
 	},
 	{
 		"<leader>ld",
-		":TroubleToggle<cr>",
+		":Trouble diagnostics toggle filter.buf=0 focus=true<cr>",
 		description = "Display diagnostic list",
 	},
 	{
 		"<leader>l<S-w>",
-		":TroubleToggle workspace_diagnostics<cr>",
+		":Trouble diagnostics toggle focus=true<cr>",
 		description = "Display workspace diagnostic list (quicklist)",
 	},
 	{

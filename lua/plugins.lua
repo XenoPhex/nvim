@@ -172,6 +172,7 @@ local plugins = {
 	["hrsh7th/nvim-cmp"] = c({ -- Tab completion
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
+		branch = "main",
 		dependencies = {
 			"onsails/lspkind.nvim", -- Formats the tab completion menu
 			"hrsh7th/cmp-nvim-lsp", -- Complete connected to Neovim's LSP server

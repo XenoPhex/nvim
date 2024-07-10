@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 catppuccin.setup({
+	compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
 	flavour = "latte",
 	dim_inactive = {
 		enabled = true,
@@ -22,13 +23,17 @@ catppuccin.setup({
 		dashboard = true,
 		lsp_trouble = true,
 		mason = true,
-		notify = true,
 		neotree = true,
+		notify = true,
+		rainbow_delimiters = true,
+		symbols_outline = true,
 		telescope = true,
 		treesitter = true,
 		treesitter_context = true,
-		rainbow_delimiters = true,
 		which_key = true,
+		window_picker = true,
+		fidget = true,
+		ufo = true,
 	},
 })
 

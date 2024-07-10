@@ -210,10 +210,6 @@ local plugins = {
 		event = "InsertEnter",
 		dependencies = "hrsh7th/nvim-cmp",
 	}),
-	["code-biscuits/nvim-biscuits"] = c({ -- Displays opening block on closing block lines
-		"code-biscuits/nvim-biscuits",
-		event = "InsertEnter",
-	}),
 	["kevinhwang91/nvim-ufo"] = c({
 		"kevinhwang91/nvim-ufo",
 		dependencies = {
@@ -238,6 +234,44 @@ local plugins = {
 		"dgagn/diagflow.nvim",
 		event = "LspAttach",
 	}),
+	["shellRaining/hlchunk.nvim"] = {
+		"shellRaining/hlchunk.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+		config = function()
+			require("hlchunk").setup({
+				chunk = {
+					enable = true,
+					exclude_filetypes = {
+						dashboard = true,
+					},
+				},
+				indent = {
+					enable = true,
+					chars = {
+						"│",
+						"¦",
+						"┆",
+						"┊",
+					},
+					-- style = {
+					-- 	peach = "#fe640b",
+					-- 	red = "#d20f39",
+					-- 	blue = "#1e66f5",
+					-- 	yellow = "#df8e1d",
+					-- 	green = "#40a02b",
+					-- 	mauve = "#8839ef",
+					-- 	teal = "#179299",
+					-- },
+					style = {
+						vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID("Whitespace")), "fg", "gui"),
+					},
+				},
+			})
+		end,
+	},
 }
 
 local function load_plugins()

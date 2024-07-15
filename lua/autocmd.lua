@@ -53,6 +53,26 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	end,
 })
 
+-- PKL/PCL Settings
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	group = augroup,
+	pattern = { "pcl", "pkl" },
+	callback = function()
+		vim.opt_local.wrap = true
+		vim.bo.shiftwidth = 2
+	end,
+})
+
+-- Proto Settings
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	group = augroup,
+	pattern = { "pcl", "pkl" },
+	callback = function()
+		vim.opt_local.wrap = true
+		vim.bo.shiftwidth = 2
+	end,
+})
+
 -- Modify formatting options.
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 	group = augroup,

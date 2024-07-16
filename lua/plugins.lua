@@ -47,8 +47,7 @@ local plugins = {
 			"MunifTanjim/nui.nvim",
 			{
 				"s1n7ax/nvim-window-picker", -- Allows selecting which window is used
-				tag = "v2.0.1",
-				pin = true,
+				version = "v2.x",
 			},
 		},
 	}),

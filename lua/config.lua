@@ -50,9 +50,6 @@ M.setup = function()
 	-- disable open fold with `l`
 	vim.cmd([[set foldopen-=hor]])
 
-	vim.o.grepprg = "rg --vimgrep --no-heading --smart-case"
-	vim.o.grepformat = "%f:%l:%c:%m,%f:%l:%m"
-
 	require("plugins")
 	require("keyboard")
 	require("autocmd")

@@ -62,6 +62,10 @@ local options = {
 		"terminal",
 	},
 
+	-- Grep options
+	grepprg = "rg --vimgrep --no-heading --smart-case",
+	grepformat = "%f:%l:%c:%m,%f:%l:%m",
+
 	-- Mouse
 	mouse = "a", -- Mouse enabled in all modes
 

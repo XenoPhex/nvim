@@ -172,7 +172,7 @@ local plugins = {
 	--> 3. Tab / Text Completion
 	["hrsh7th/nvim-cmp"] = c({ -- Tab completion
 		"hrsh7th/nvim-cmp",
-		event = "InsertEnter",
+		event = "BufReadPre",
 		branch = "main",
 		dependencies = {
 			"onsails/lspkind.nvim", -- Formats the tab completion menu

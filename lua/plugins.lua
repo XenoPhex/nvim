@@ -76,6 +76,7 @@ local plugins = {
 	["nvim-tree/nvim-web-devicons"] = c("nvim-tree/nvim-web-devicons"), -- More icons!
 	["utilyre/barbecue.nvim"] = c({ -- Location bar
 		"utilyre/barbecue.nvim",
+		event = "BufReadPre",
 		dependencies = {
 			"SmiteshP/nvim-navic", -- Location Library
 			"nvim-tree/nvim-web-devicons",
@@ -108,6 +109,7 @@ local plugins = {
 	}),
 	["chaoren/vim-wordmotion"] = { -- context aware word traversal for b, w, e keys
 		"chaoren/vim-wordmotion",
+		event = "BufReadPre",
 	},
 	---- Language Setup
 	--> 1. Setup Snippets
@@ -186,10 +188,12 @@ local plugins = {
 	["ray-x/lsp_signature.nvim"] = c({
 		"ray-x/lsp_signature.nvim",
 		branch = "master",
+		event = "BufReadPre",
 	}), -- Connect tab completion with LSP
 	--> 4. Language Tooling
 	["jmbuhr/otter.nvim"] = c({ -- Allows for LSP in ``` blocks
 		"jmbuhr/otter.nvim",
+		event = "LspAttach",
 		dependencies = {
 			"hrsh7th/nvim-cmp",
 			"neovim/nvim-lspconfig",
@@ -202,6 +206,7 @@ local plugins = {
 	}), -- Floating LSP Status
 	["numToStr/Comment.nvim"] = c({ -- Language aware comment helpers
 		"numToStr/Comment.nvim",
+		event = "LspAttach",
 		dependencies = "JoosepAlviste/nvim-ts-context-commentstring", -- Adds support for additional languages
 	}),
 	["windwp/nvim-autopairs"] = c({ -- Smart pairing for (["...etc.
@@ -211,15 +216,20 @@ local plugins = {
 	}),
 	["kevinhwang91/nvim-ufo"] = c({
 		"kevinhwang91/nvim-ufo",
+		event = "LspAttach",
 		dependencies = {
 			"kevinhwang91/promise-async",
 			"nvim-treesitter/nvim-treesitter",
 			"luukvbaal/statuscol.nvim", -- integrate with the gutter properly
 		},
 	}),
-	["folke/trouble.nvim"] = c("folke/trouble.nvim"), -- Error/Warning terminal
+	["folke/trouble.nvim"] = c({ -- Error/Warning terminal
+		"folke/trouble.nvim",
+		event = "LspAttach",
+	}),
 	["simrat39/symbols-outline.nvim"] = c({ -- A tree like view for symbols in a given file
 		"simrat39/symbols-outline.nvim",
+		event = "LspAttach",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 		},

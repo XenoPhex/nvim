@@ -39,6 +39,7 @@ local options = {
 	signcolumn = "yes", -- Always enable sign column to avoid spasms
 	smartcase = true, -- ... but case sensitive when uc present
 	smartindent = false, -- ... but case sensitive when uc present
+	smoothscroll = true,
 	splitright = true, -- Vertical splits to the right
 	termguicolors = true, -- Enable true colors in terminal
 	timeoutlen = 500, -- Timeout for keybindings

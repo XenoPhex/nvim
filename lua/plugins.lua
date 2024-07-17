@@ -98,6 +98,7 @@ local plugins = {
 	["ibhagwan/fzf-lua"] = c({
 		"ibhagwan/fzf-lua",
 		dependencies = {
+			"nvim-web-devicons",
 			"nvim-treesitter/nvim-treesitter",
 		},
 	}),
@@ -150,6 +151,7 @@ local plugins = {
 				"folke/neodev.nvim",
 				config = true,
 			}, -- full signature help, docs and completion for the nvim lua API, needs to be setup before lspconfig
+			"cmp-nvim-lsp",
 		},
 	}),
 	["williamboman/mason.nvim"] = c({ -- Installs and Manages LSP Servers

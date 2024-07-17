@@ -17,6 +17,7 @@ return {
 	lint = {},
 	lint_config = function(lint)
 		-- fill me in as necessary
+		return {}
 	end,
 	conform = {},
 }

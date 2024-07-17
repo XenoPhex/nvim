@@ -85,8 +85,10 @@ local options = {
 	spelllang = "en_us",
 
 	-- Fold Settings
-	foldmethod = "expr",
+	foldenable = false,
 	foldexpr = "nvim_treesitter#foldexpr()",
+	foldlevel = 99,
+	foldmethod = "expr",
 }
 
 for k, v in pairs(options) do

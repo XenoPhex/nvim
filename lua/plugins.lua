@@ -214,15 +214,6 @@ local plugins = {
 		event = "InsertEnter",
 		dependencies = "hrsh7th/nvim-cmp",
 	}),
-	["kevinhwang91/nvim-ufo"] = c({
-		"kevinhwang91/nvim-ufo",
-		event = "LspAttach",
-		dependencies = {
-			"kevinhwang91/promise-async",
-			"nvim-treesitter/nvim-treesitter",
-			"luukvbaal/statuscol.nvim", -- integrate with the gutter properly
-		},
-	}),
 	["folke/trouble.nvim"] = c({ -- Error/Warning terminal
 		"folke/trouble.nvim",
 		event = "LspAttach",

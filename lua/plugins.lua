@@ -147,10 +147,6 @@ local plugins = {
 		branch = "master",
 		event = "BufReadPre",
 		dependencies = {
-			{
-				"folke/neodev.nvim",
-				config = true,
-			}, -- full signature help, docs and completion for the nvim lua API, needs to be setup before lspconfig
 			"cmp-nvim-lsp",
 		},
 	}),
@@ -273,6 +269,21 @@ local plugins = {
 				},
 			})
 		end,
+	},
+	["folke/lazydev.nvim"] = { -- full signature help, docs and completion for the nvim lua API, needs to be setup before lspconfig
+		"folke/lazydev.nvim",
+		ft = "lua", -- only load on lua files
+		opts = {
+			library = {
+				-- See the configuration section for more details
+				-- Load luvit types when the `vim.uv` word is found
+				{ path = "luvit-meta/library", words = { "vim%.uv" } },
+				"LazyVim",
+			},
+		},
+		dependencies = {
+			"Bilal2453/luvit-meta", -- optional `vim.uv` typings
+		},
 	},
 }
 

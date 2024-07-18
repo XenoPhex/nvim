@@ -156,6 +156,10 @@ cmp.setup({
 			},
 		},
 		{ name = "path", group_index = 2 },
+		{
+			name = "lazydev",
+			-- group_index = 0, -- set group index to 0 to skip loading LuaLS completions
+		},
 	},
 	window = {
 		documentation = {},

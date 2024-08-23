@@ -35,6 +35,7 @@ end
 M.get_overrides = function()
 	local status_ok, overrides = pcall(require, "custom")
 	if not status_ok then
+		vim.notify("issue loading custom configuration", "debug")
 		return require("custom_template")
 	end
 	return tbl.merge(require("custom_template"), overrides) -- merge custom settings with template in case custom is missing fields

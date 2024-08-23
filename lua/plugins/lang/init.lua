@@ -20,6 +20,10 @@ local function extended_capabilities()
 end
 
 local function load_languages()
+	for _, config in pairs(override_settings.custom_lang) do
+		require(config)
+	end
+
 	local langs = {
 		bashls = {},
 		gopls = require("plugins.lang.gopls"),

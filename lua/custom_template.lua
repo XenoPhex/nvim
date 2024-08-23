@@ -8,6 +8,12 @@ return {
 		-- Yes, you will have to repeat the name in both the key and the config.
 	},
 	treesitter_lang = {}, -- List of treesitter languages to support: https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
+	custom_lang = {
+		-- format should look like:
+		-- language_server_name = path_to_server_config_setup
+		-- see 'help lspconfig-new' for server config setup
+		-- Additionally:  https://github.com/neovim/nvim-lspconfig/blob/master/CONTRIBUTING.md#adding-a-server-to-lspconfig
+	},
 	lang = {
 		-- format should look like:
 		-- language_server_name = { LSP Config },

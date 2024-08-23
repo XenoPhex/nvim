@@ -63,10 +63,11 @@ return {
 					"*test*",
 					"*fakes*",
 					"vendor",
+					".out",
 				}, " -E "),
 			})
 		end,
-		description = "Fuzzy Find / Search for file (ignore tests/fake/vendor)",
+		description = "Fuzzy Find / Search for file (ignore tests/fake/vendor/out)",
 	},
 	{
 		"<C-f>",

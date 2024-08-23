@@ -66,7 +66,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 -- Proto Settings
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	group = augroup,
-	pattern = { "pcl", "pkl" },
+	pattern = { "proto" },
 	callback = function()
 		vim.opt_local.wrap = true
 		vim.bo.shiftwidth = 2

@@ -16,6 +16,13 @@ local function extended_capabilities()
 				lineFoldingOnly = true,
 			},
 		},
+		-- FIXME: workaround for https://github.com/neovim/neovim/issues/28058
+		workspace = {
+			didChangeWatchedFiles = {
+				dynamicRegistration = false,
+				relativePatternSupport = false,
+			},
+		},
 	})
 end
 

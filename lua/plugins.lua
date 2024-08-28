@@ -139,7 +139,10 @@ local plugins = {
 			"RRethy/nvim-treesitter-textsubjects", -- Adds block aware visual selection expansion
 			"nvim-treesitter/nvim-treesitter-textobjects", -- Adds additional language parsing mechanisms
 			"m-demare/hlargs.nvim", -- Highlight arguments' definitions and usages
-			"https://gitlab.com/HiPhish/rainbow-delimiters.nvim", -- Rainbow braces
+			{
+				"https://gitlab.com/HiPhish/rainbow-delimiters.nvim", -- Rainbow braces
+				branch = "master",
+			},
 		},
 	}),
 	["neovim/nvim-lspconfig"] = c({ -- Contains basic LSP configurations, when this runs it loads plugins.lsp due to c's gsub magic

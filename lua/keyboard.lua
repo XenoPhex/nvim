@@ -32,6 +32,7 @@ local fd_opts = table.concat({
 	".mypy_cache*", -- Exclude mypy cache
 	".venv", -- Exclude python virtual envs
 	"fake_*.go", -- Exclude fakes
+	"bazel-repo", -- Exclude generated bazel files
 	"bin-bazel", -- Exclude generated bazel files
 	"node_modules", -- Exclude node_modules
 }, " -E ") .. " --no-ignore-vcs" -- Include git ignored files

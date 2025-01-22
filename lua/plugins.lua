@@ -32,7 +32,7 @@ local plugins = {
 	["nvim-lua/plenary.nvim"] = p(100, "nvim-lua/plenary.nvim"), -- Common Lua functions
 	["tanvirtin/vgit.nvim"] = c({
 		"tanvirtin/vgit.nvim",
-		event = "BufReadPre",
+		event = "VimEnter",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-tree/nvim-web-devicons",

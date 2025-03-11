@@ -15,7 +15,7 @@ fzf.setup({
 	},
 	lsp = {
 		ignore_current_line = true,
-		jump_to_single_result = true,
+		jump1 = true,
 		symbols = {
 			symbol_icons = require("utils.icons").ui,
 		},

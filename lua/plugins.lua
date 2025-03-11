@@ -51,10 +51,6 @@ local plugins = {
 			},
 		},
 	}),
-	["fladson/vim-kitty"] = {
-		"fladson/vim-kitty", -- Kitty Config helper
-		event = "BufReadPre kitty.conf",
-	},
 	["tpope/vim-fugitive"] = {
 		"tpope/vim-fugitive", -- Adds Neovim Git commands
 		event = "BufReadPre",

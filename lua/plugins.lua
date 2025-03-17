@@ -136,7 +136,7 @@ local plugins = {
 			"nvim-treesitter/nvim-treesitter-textobjects", -- Adds additional language parsing mechanisms
 			"m-demare/hlargs.nvim", -- Highlight arguments' definitions and usages
 			{
-				"https://gitlab.com/HiPhish/rainbow-delimiters.nvim", -- Rainbow braces
+				"hiphish/rainbow-delimiters.nvim", -- Rainbow braces
 				branch = "master",
 			},
 		},

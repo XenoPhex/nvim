@@ -5,6 +5,9 @@ if not status_ok then
 end
 
 fzf.setup({
+	fzf_opts = {
+		["--highlight-line"] = true,
+	},
 	winopts = {
 		preview = {
 			default = "bat_native",

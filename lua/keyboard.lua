@@ -48,9 +48,7 @@ return {
 		"<C-p>",
 		function()
 			require("fzf-lua").files({
-				fd_opts = table.concat({
-					fd_opts,
-				}, " -E "),
+				fd_opts = fd_opts .. " --follow",
 			})
 		end,
 		description = "Fuzzy Find / Search for file",

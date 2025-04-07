@@ -53,9 +53,7 @@ local diagnostics = {
 		severity_sort = true,
 		update_in_insert = true,
 		virtual_text = false,
-		virtual_lines = {
-			only_current_line = true,
-		},
+		virtual_lines = false,
 	},
 }
 return diagnostics

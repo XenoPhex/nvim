@@ -23,37 +23,37 @@
 
 local icons = require("utils.icons")
 local signs = {
-	{ name = "DiagnosticSignError", text = icons.diagnostics.BoldError },
-	{ name = "DiagnosticSignWarn", text = icons.diagnostics.BoldWarning },
-	{ name = "DiagnosticSignHint", text = icons.diagnostics.BoldHint },
-	{ name = "DiagnosticSignInfo", text = icons.diagnostics.BoldInformation },
+    { name = "DiagnosticSignError", text = icons.diagnostics.BoldError },
+    { name = "DiagnosticSignWarn",  text = icons.diagnostics.BoldWarning },
+    { name = "DiagnosticSignHint",  text = icons.diagnostics.BoldHint },
+    { name = "DiagnosticSignInfo",  text = icons.diagnostics.BoldInformation },
 }
 for _, sign in ipairs(signs) do
-	if not sign.texthl then
-		sign.texthl = sign.name
-	end
-	vim.fn.sign_define(sign.name, sign)
+    if not sign.texthl then
+        sign.texthl = sign.name
+    end
+    vim.fn.sign_define(sign.name, sign)
 end
 
 local diagnostics = {
-	off = {
-		underline = false,
-		virtual_text = false,
-		signs = false,
-		update_in_insert = false,
-		virtual_lines = false,
-	},
-	on = {
-		float = {
-			border = "rounded",
-			focusable = false,
-			severity_sort = true,
-			source = "always",
-		},
-		severity_sort = true,
-		update_in_insert = true,
-		virtual_text = false,
-		virtual_lines = false,
-	},
+    off = {
+        underline = false,
+        virtual_text = false,
+        signs = false,
+        update_in_insert = false,
+        virtual_lines = false,
+    },
+    on = {
+        float = {
+            border = "rounded",
+            focusable = false,
+            severity_sort = true,
+            source = "always",
+        },
+        severity_sort = true,
+        update_in_insert = true,
+        virtual_text = false,
+        virtual_lines = false,
+    },
 }
 return diagnostics
